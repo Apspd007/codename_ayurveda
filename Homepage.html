@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Lora&family=Montserrat&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Codename-Ayurveda</title>
+</head>
+
+<body class="h-screen">
+    <!-- mobile and tablet header -->
+    <section class="lg:hidden flex flex-col w-full bg-white border-b gap-y-4">
+        <header class=" w-full px-10 flex justify-between items-center md:flex-row flex-col gap-y-4">
+            <div><img class="max-h-[70px] object-cover" src="images/ggu-image.png"></div>
+            <img class="h-28 object-cover hidden" src="images/gg.png">
+            <div><img class="max-h-[60px] object-cover" src="images/aiia-image.png"></div>
+        </header>
+
+        <!-- Logo and navigation -->
+        <div class="flex justify-end bg-white items-end">
+            <nav class=" flex w-min items-center self-end justify-end gap-x-7 py-1 pl-14 px-10">
+                <div
+                    class="nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    Home</div>
+                <div
+                    class="nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    About</div>
+                <div
+                    class="nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    Academic</div>
+                <div
+                    class="nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    Administration</div>
+            </nav>
+        </div>
+
+    </section>
+
+    <!-- herosection -->
+    <section class="hero-section h-screen object-contain">
+
+        <!-- header -->
+        <section class="hidden header-section h-[160px] lg:flex flex-col justify-between">
+
+            <header class=" w-full h-[90px] px-10 flex justify-between items-center ">
+                <div><img class="2xl:h-[90px] max-h-[90px] object-cover" src="images/ggu-image.png"></div>
+                <img class="h-28 object-cover" src="images/gg.png">
+                <div><img class="2xl:h-[90px] max-h-[90px] object-cover" src="images/aiia-image.png"></div>
+            </header>
+
+            <!-- Logo and navigation -->
+            <div class="flex justify-between items-end">
+                <span class="lg:ml-[10%]">
+                    <img src="images/ayurveda-logo.png" alt="Ayurveda Logo" width="250" height="60">
+                </span>
+                <nav class=" flex w-min items-center self-end justify-end gap-x-7 py-1 pl-14 px-10">
+                    <div
+                        class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                        Home</div>
+                    <div
+                        class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                        About</div>
+                    <div
+                        class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                        Academic</div>
+                    <div
+                        class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                        Administration</div>
+                </nav>
+            </div>
+
+        </section>
+        <!-- header end -->
+
+        <!-- slider -->
+        <section>
+
+        </section>
+
+
+    </section>
+    <!-- hero section end -->
+
+    <!-- plant section -->
+    <section
+        class="plant-section h-[130vh] md:h-screen px-8 sm:px-16 md:px-20 lg:px-32 xl:px-48 2xl:px-64 pt-10 lg:pt-12 2xl:pt-16">
+        <div>
+            <h2 class="plant-title text-3xl xl:text-4xl 2xl:text-5xl tracking-wider pb-5">Useful Plants</h2>
+            <p class="plant-subtitle tracking-wider text-base 2xl:text-lg">Lorem ipsum dolor sit amet consectetur. Risus
+                vitae et cras non
+                amet nisl neque
+                commodo nisi. Risus sit egestas solli citudin duis egestas neque nibh sollicitudin fames. lorem ipsum
+                dolor sit amet consectetur. Risus vitae et cras non amet nisl neque commodo nisi. </p>
+        </div>
+        <!-- plant showcase -->
+        <section
+            class="plant-showcase mt-20 grid grid-cols-2 md:grid-cols-3 mx-5 gap-y-32 lg:gap-y-28 gap-x-10 justify-items-center 2xl:justify-items-start">
+            <div
+                class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32  lg:w-36 2xl:hover:w-80 border border-black rounded-md plant-border flex">
+                <span class="self-center m-auto">
+                    <img class="plant m-auto" src="images/showcase-plants/common_mallow.png" alt="Common Mallow">
+                    <p class="2xl:hidden pb-0">Common Mallow</p>
+                </span>
+                <span class="plant-details m-5">
+                    Name: Common Mallow
+                </span>
+            </div>
+            <div
+                class=" h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32  lg:w-36 2xl:hover:w-80 border border-black rounded-md plant-border flex">
+                <span class="self-center m-auto">
+                    <img class="plant m-auto" src="images/showcase-plants/common_mallow.png" alt="Common Mallow">
+                    <p class="2xl:hidden pb-0">Common Mallow</p>
+                </span>
+                <span class="plant-details m-5">
+                    Name: Common Mallow
+                </span>
+            </div>
+            <div
+                class=" h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32  lg:w-36 2xl:hover:w-80 border border-black rounded-md plant-border flex">
+                <span class="self-center m-auto">
+                    <img class="plant m-auto" src="images/showcase-plants/common_mallow.png" alt="Common Mallow">
+                    <p class="2xl:hidden pb-0">Common Mallow</p>
+                </span>
+                <span class="plant-details m-5">
+                    Name: Common Mallow
+                </span>
+            </div>
+            <div
+                class=" h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32  lg:w-36 2xl:hover:w-80 border border-black rounded-md plant-border flex">
+                <span class="self-center m-auto">
+                    <img class="plant m-auto" src="images/showcase-plants/common_mallow.png" alt="Common Mallow">
+                    <p class="2xl:hidden pb-0">Common Mallow</p>
+                </span>
+                <span class="plant-details m-5">
+                    Name: Common Mallow
+                </span>
+            </div>
+            <div
+                class=" h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32  lg:w-36 2xl:hover:w-80 border border-black rounded-md plant-border flex">
+                <span class="self-center m-auto">
+                    <img class="plant m-auto" src="images/showcase-plants/common_mallow.png" alt="Common Mallow">
+                    <p class="2xl:hidden pb-0">Common Mallow</p>
+                </span>
+                <span class="plant-details m-5">
+                    Name: Common Mallow
+                </span>
+            </div>
+            <div
+                class=" h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32  lg:w-36 2xl:hover:w-80 border border-black rounded-md plant-border flex">
+                <span class="self-center m-auto">
+                    <img class="plant m-auto" src="images/showcase-plants/common_mallow.png" alt="Common Mallow">
+                    <p class="2xl:hidden pb-0">Common Mallow</p>
+                </span>
+                <span class="plant-details m-5">
+                    Name: Common Mallow
+                </span>
+            </div>
+        </section>
+        <div class="text-center mt-24">
+            <a href="#" class="montserrat text-lg m-auto" target="_blank" rel="noopener noreferrer">Browse More
+                Plants</a>
+        </div>
+    </section>
+
+    <!-- Collaboration -->
+    <section class="h-screen w-full mt-20">
+        <!-- GGU and AIIA -->
+        <div
+            class="flex flex-col justify-evenly items-center gap-y-10 sm:flex-row sm:justify-center sm:items-center sm:gap-x-20 lg:gap-x-44 2xl:gap-x-60 mx-5">
+            <span class="w-64 sm:w-60 lg:w-72 2xl:w-96"><img src="images/GGU.png"
+                    alt="Guru Ghasidas Vishwavidyalaya"></span>
+            <span class="w-14 sm:w-11 lg:w-14 2xl:w-16"><img src="images/handshake-thin.svg" alt="handshake"></span>
+            <span class="w-64 sm:w-60 lg:w-72 2xl:w-96"><img src="images/AIIA.png"
+                    alt="All India Institute of Ayurveda"></span>
+        </div>
+        <div class="mt-24 text-center">
+            <h2 class="lora font-semibold text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl mx-2">To Spread awareness and
+                importance of Ayurveda</h2>
+            <p class="montserrat px-[20%] text-sm lg:text-base 2xl:text-xl mt-5">Lorem ipsum dolor sit amet consectetur.
+                Risus vitae et cras non
+                amet nisl neque commodo nisi. Risus sit
+                egestas solli citudin duis egestas neque nibh sollicitudin fames. lorem ipsum dolor sit amet
+                consectetur. Risus vitae et cras non amet nisl neque commodo nisi. Risus sit egestas sollicitudin duis
+                egestas neque nibh sollicitudin fames.</p>
+        </div>
+        <div class="mt-32 sm:mt-40 grid grid-cols-2 sm:grid-cols-3 justify-items-center items-center gap-10">
+            <div
+                class="w-32 sm:w-40 lg:w-52 2xl:w-60 h-32  sm:h-40 lg:h-52 2xl:h-60 rounded-xl col-start-1 col-end-3 sm:col-auto  bg-gray-400">
+            </div>
+            <div class="w-32 sm:w-40 lg:w-52 2xl:w-60 h-32  sm:h-40 lg:h-52 2xl:h-60 rounded-xl bg-gray-400"></div>
+            <div class="w-32 sm:w-40 lg:w-52 2xl:w-60 h-32  sm:h-40 lg:h-52 2xl:h-60 rounded-xl bg-gray-400"></div>
+        </div>
+    </section>
+    <!-- team section -->
+    <section class="h-screen mt-80 sm:mt-0 2xl:mt-20">
+        <!-- title -->
+        <div class="text-center">
+            <h2 class="lora text-center text-3xl 2xl:text-4xl ">Our Team</h2>
+            <p class="montserrat px-[20%] text-base 2xl:text-xl mt-5">Lorem ipsum dolor sit amet consectetur.
+                Risus vitae et cras non amet nisl neque commodo nisi. Risus sit egestas solli citudin duis egestas neque
+                nibh sollicitudin fames.</p>
+        </div>
+        <!-- team -->
+        <div class="mt-36 sm:mt-48 grid grid-cols-1 sm:grid-cols-2 gap-y-40 justify-items-center items-center">
+            <div class="w-48 2xl:w-56 h-36 rounded-xl bg-gray-200">
+                <img class="m-auto -translate-y-24" src="images/team/member-1.png" alt="team member" />
+                <div class="w-full h-full flex flex-col justify-center items-center translate-y-[-120px]">
+                    <h4>Luc Ganssou</h4>
+                    <p>Staff</p>
+                </div>
+            </div>
+            <div
+                class="w-48 2xl:w-56 h-36 rounded-xl col-start-1 col-end-2 sm:col-end-3 row-start-1 row-end-2 bg-gray-200">
+                <img class="m-auto -translate-y-24" src="images/team/team-led.png" alt="team leader">
+                <div class="w-full h-full flex flex-col justify-center items-center translate-y-[-120px]">
+                    <h4>Hanife Gunduz</h4>
+                    <p>Admin</p>
+                </div>
+            </div>
+            <div class="w-48 2xl:w-56 h-36 rounded-xl bg-gray-200">
+                <img class="m-auto -translate-y-24" src="images/team/member-2.png" alt="team member" />
+                <div class="w-full h-full flex flex-col justify-center items-center translate-y-[-120px]">
+                    <h4>Ariel Houessou</h4>
+                    <p>Staff</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <section class="h-[30vh] bg-gray-300 p-10">
+        <h1 class="lora text-4xl">Footer</h1>
+    </section>
+</body>
+
+</html>
