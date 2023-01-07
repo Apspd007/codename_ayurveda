@@ -18,9 +18,11 @@
 <body onload="init()">
     <!-- mobile and tablet header -->
     <section class="lg:hidden flex flex-col w-full bg-white border-b gap-y-4">
-        <header class=" w-full px-10 flex justify-between items-center md:flex-row flex-col gap-y-4">
+        <header class="w-full px-2 lg:px-10 flex justify-between items-center md:flex-row flex-col gap-y-4">
             <div onclick="blankRedirect('https://www.ggu.ac.in/')" class="cursor-pointer"><img
                     class="max-h-[70px] object-cover" src="images/ggu-image.png"></div>
+                    
+                <img class="hidden md:block h-20 lg:h-24 object-cover cursor-pointer" onclick="redirectHome()" src="images/gg.png">
             <div onclick="blankRedirect('https://aiia.gov.in/')" class="cursor-pointer"><img
                     class="max-h-[60px] object-cover" src="images/aiia-image.png"></div>
         </header>
@@ -46,15 +48,15 @@
     </section>
 
     <!-- herosection -->
-    <section class="hero-section h-[80vh] md:h-screen flex flex-col">
+    <section class="hero-section h-screen min-h-[700px] md:min-h-[860px] lg:min-h-[800px] flex flex-col">
 
         <!-- header -->
         <section class="hidden header-section h-[160px] lg:flex flex-col justify-between">
 
-            <header class="w-full h-[90px] px-10 flex justify-between items-center ">
+            <header class="w-full px-10 flex justify-between items-center ">
                 <div onclick="blankRedirect('https://www.ggu.ac.in/')" class="cursor-pointer"><img
                         class="2xl:h-[90px] max-h-[90px] object-cover" src="images/ggu-image.png"></div>
-                <img class="h-28 object-cover cursor-pointer" onclick="redirectHome()" src="images/gg.png">
+                <img class="h-24 object-cover cursor-pointer" onclick="redirectHome()" src="images/gg.png">
                 <div onclick="blankRedirect('https://aiia.gov.in/')" class="cursor-pointer"><img
                         class="2xl:h-[90px] max-h-[90px] object-cover" src="images/aiia-image.png"></div>
             </header>
@@ -64,7 +66,7 @@
                 <span class="xl:ml-[12%]">
                     <img src="images/ayurveda-logo.png" alt="Ayurveda Logo" width="250" height="60">
                 </span>
-                <nav class=" flex w-min items-center self-end justify-end gap-x-7 py-1 pl-14 px-10">
+                <nav class="flex w-min items-center self-end justify-end gap-x-7 py-1 pl-14 px-10">
                     <div onclick="redirectHome()"
                         class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
                         Home</div>
@@ -124,7 +126,7 @@
 
     <!-- plant section -->
     <section
-        class="plant-section h-[130vh] md:h-screen px-8 sm:px-16 md:px-20 lg:px-32 xl:px-48 2xl:px-64 pt-10 lg:pt-12 2xl:pt-16">
+        class="plant-section px-6 py-10 sm:px-16 md:px-20 lg:px-32 xl:px-48 2xl:px-64 pt-10 lg:pt-12 2xl:pt-16">
         <div>
             <h2 class="plant-title text-3xl xl:text-4xl 2xl:text-5xl tracking-wider pb-5">Useful Plants</h2>
             <p class="plant-subtitle tracking-wider text-base 2xl:text-lg">Lorem ipsum dolor sit amet consectetur. Risus
@@ -136,48 +138,60 @@
         <!-- plant showcase -->
         <section
             class="plant-showcase mt-20 grid grid-cols-2 md:grid-cols-3 mx-5 gap-y-32 lg:gap-y-28 gap-x-10 justify-items-center 2xl:justify-items-start">
+            <a href="plant-details.jsp?plant=0">
             <div
                 class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
                 <span class="self-center m-auto">
-                    <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/holy-basil.png" alt="Holy Basil">
+                    <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/holy-basil.png" alt="Holy Basil">
                 </span>
                 <p class="plant-name absolute -bottom-14 sm:-bottom-10">Holy Basil</p>
             </div>
+            </a>
+            <a href="plant-details.jsp?plant=1">
             <div
                 class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
                 <span class="self-center m-auto">
-                    <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/ashwagandha.png" alt="Ashwagandha">
+                    <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/ashwagandha.png" alt="Ashwagandha">
                 </span>
                 <p class="plant-name absolute -bottom-14 sm:-bottom-10">Ashwagandha</p>
             </div>
+            </a>
+            <a href="plant-details.jsp?plant=2">
             <div
                 class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
                 <span class="self-center m-auto">
-                    <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/curcuma.png" alt="Curcuma Longa">
+                    <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/curcuma.png" alt="Curcuma Longa">
                 </span>
                 <p class="plant-name absolute -bottom-14 sm:-bottom-10">Curcuma Longa</p>
             </div>
+            </a>
+            <a href="plant-details.jsp?plant=3">
             <div
                 class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
                 <span class="self-center m-auto">
-                    <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/saunf.png" alt="Saunf">
+                    <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/saunf.png" alt="Saunf">
                 </span>
                 <p class="plant-name absolute -bottom-14 sm:-bottom-10">Saunf</p>
             </div>
+            </a>
+            <a href="plant-details.jsp?plant=4">
             <div
                 class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
                 <span class="self-center m-auto">
-                    <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/shatavari.png" alt="Shatavari">
+                    <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/shatavari.png" alt="Shatavari">
                 </span>
                 <p class="plant-name absolute -bottom-14 sm:-bottom-10">Shatavari</p>
             </div>
+            </a>
+            <a href="plant-details.jsp?plant=5">
             <div
                 class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
                 <span class="self-center m-auto">
-                    <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/sarso.png" alt="Sarso">
+                    <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/sarson.png" alt="Sarson">
                 </span>
-                <p class="plant-name absolute -bottom-14 sm:-bottom-10">Sarso</p>
+                <p class="plant-name absolute -bottom-14 sm:-bottom-10">Sarson</p>
             </div>
+            </a>
         </section>
         <div class="text-center mt-24">
             <a href="#" class="montserrat text-lg m-auto underline" target="_blank" rel="noopener noreferrer">Browse
@@ -187,7 +201,7 @@
     </section>
 
     <!-- Collaboration -->
-    <section class="h-screen w-full mt-20">
+    <section class="w-full my-20">
         <!-- GGU and AIIA -->
         <div
             class="flex flex-col justify-evenly items-center gap-y-10 sm:flex-row sm:justify-center sm:items-center sm:gap-x-20 lg:gap-x-44 2xl:gap-x-60 mx-5">
@@ -211,41 +225,6 @@
             </div>
             <div class="w-32 sm:w-40 lg:w-52 2xl:w-60 h-32  sm:h-40 lg:h-52 2xl:h-60 rounded-xl bg-gray-400"></div>
             <div class="w-32 sm:w-40 lg:w-52 2xl:w-60 h-32  sm:h-40 lg:h-52 2xl:h-60 rounded-xl bg-gray-400"></div>
-        </div>
-    </section>
-    <!-- team section -->
-    <section class="h-[140vh] sm:h-screen mt-80 sm:mt-0 2xl:mt-20">
-        <!-- title -->
-        <div class="text-center">
-            <h2 class="lora text-center text-3xl 2xl:text-4xl ">Our Team</h2>
-            <p class="montserrat px-[20%] text-base 2xl:text-xl mt-5">Lorem ipsum dolor sit amet consectetur.
-                Risus vitae et cras non amet nisl neque commodo nisi. Risus sit egestas solli citudin duis egestas neque
-                nibh sollicitudin fames.</p>
-        </div>
-        <!-- team -->
-        <div class="mt-36 sm:mt-48 grid grid-cols-1 sm:grid-cols-2 gap-y-40 justify-items-center items-center">
-            <div class="w-48 2xl:w-56 h-36 rounded-xl bg-gray-200">
-                <img class="m-auto -translate-y-24" src="images/team/member-1.png" alt="team member" />
-                <div class="w-full h-full flex flex-col justify-center items-center translate-y-[-120px]">
-                    <h4>Thanendra Kashyap</h4>
-                    <p>Developer <br /> (Backend)</p>
-                </div>
-            </div>
-            <div
-                class="w-48 2xl:w-56 h-36 rounded-xl col-start-1 col-end-2 sm:col-end-3 row-start-1 row-end-2 bg-gray-200">
-                <img class="m-auto -translate-y-24" src="images/team/team-led.png" alt="team leader">
-                <div class="w-full h-full flex flex-col justify-center items-center translate-y-[-120px]">
-                    <h4>Sushma Jaiswal</h4>
-                    <p>Project Head</p>
-                </div>
-            </div>
-            <div class="w-48 2xl:w-56 h-36 rounded-xl bg-gray-200">
-                <img class="m-auto -translate-y-24" src="images/team/member-2.png" alt="team member" />
-                <div class="w-full h-full flex flex-col justify-center items-center translate-y-[-120px]">
-                    <h4>Tushar Kashyap</h4>
-                    <p>Developer <br /> (Frontend)</p>
-                </div>
-            </div>
         </div>
     </section>
     <!-- footer -->

@@ -1,0 +1,13 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>PlantDetails</servlet-name>
+        <servlet-class>PlantDetails</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PlantDetails</servlet-name>
+        <url-pattern>/plant-details</url-pattern>
+    </servlet-mapping>
+
+</web-app>
