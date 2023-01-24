@@ -21,8 +21,9 @@
         <header class="w-full px-2 lg:px-10 flex justify-between items-center md:flex-row flex-col gap-y-4">
             <div onclick="blankRedirect('https://www.ggu.ac.in/')" class="cursor-pointer"><img
                     class="max-h-[70px] object-cover" src="images/ggu-image.png"></div>
-                    
-                <img class="hidden md:block h-20 lg:h-24 object-cover cursor-pointer" onclick="redirectHome()" src="images/gg.png">
+
+            <img class="hidden md:block h-20 lg:h-24 object-cover cursor-pointer" onclick="redirectHome()"
+                src="images/gg.png">
             <div onclick="blankRedirect('https://aiia.gov.in/')" class="cursor-pointer"><img
                     class="max-h-[60px] object-cover" src="images/aiia-image.png"></div>
         </header>
@@ -94,7 +95,9 @@
             </div>
             <!-- text -->
             <div class="w-3/4 lg:w-2/6 lg:aspect-[4/3] flex flex-col gap-y-10 justify-center mx-4 mt-5 lg:mt-0">
-                <h2 id="image-text" class="lora lg:text-lg 2xl:text-2xl text-white text-center lg:text-left"></h2>
+                <h2 id="image-text"
+                    class="lora lg:text-lg 2xl:text-2xl text-white flex flex-col justify-center items-center lg:text-left text-center">
+                </h2>
                 <p class="text-end lg:text-left"><a href="#"
                         class="montserrat hidden lg:inline-block text-lg rounded-sm shadow-lg active:bg-gray-300 bg-white text-black px-2">Learn
                         more</a></p>
@@ -125,11 +128,10 @@
     <!-- hero section end -->
 
     <!-- plant section -->
-    <section
-        class="plant-section px-6 py-10 sm:px-16 md:px-20 lg:px-32 xl:px-48 2xl:px-64 pt-10 lg:pt-12 2xl:pt-16">
+    <section class="plant-section px-6 py-10 sm:px-16 md:px-20 lg:px-32 xl:px-48 2xl:px-64 pt-10 lg:pt-12 2xl:pt-16">
         <div>
             <h2 class="plant-title text-3xl xl:text-4xl 2xl:text-5xl tracking-wider pb-5">Useful Plants</h2>
-            <p class="plant-subtitle tracking-wider text-base 2xl:text-lg">Lorem ipsum dolor sit amet consectetur. Risus
+            <p class="plant-subtitle tracking-wider text-base 2xl:text-lg text-center">Lorem ipsum dolor sit amet consectetur. Risus
                 vitae et cras non
                 amet nisl neque
                 commodo nisi. Risus sit egestas solli citudin duis egestas neque nibh sollicitudin fames. lorem ipsum
@@ -139,66 +141,148 @@
         <section
             class="plant-showcase mt-20 grid grid-cols-2 md:grid-cols-3 mx-5 gap-y-32 lg:gap-y-28 gap-x-10 justify-items-center 2xl:justify-items-start">
             <a href="plant-details.jsp?plant=0">
-            <div
-                class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
-                <span class="self-center m-auto">
-                    <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/holy-basil.png" alt="Holy Basil">
-                </span>
-                <p class="plant-name absolute -bottom-14 sm:-bottom-10">Holy Basil</p>
-            </div>
+                <div
+                    class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
+                    <span class="self-center m-auto">
+                        <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/holy-basil.png"
+                            alt="Holy Basil">
+                    </span>
+                    <p class="plant-name absolute -bottom-14 sm:-bottom-10">Holy Basil</p>
+                </div>
             </a>
             <a href="plant-details.jsp?plant=1">
-            <div
-                class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
-                <span class="self-center m-auto">
-                    <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/ashwagandha.png" alt="Ashwagandha">
-                </span>
-                <p class="plant-name absolute -bottom-14 sm:-bottom-10">Ashwagandha</p>
-            </div>
+                <div
+                    class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
+                    <span class="self-center m-auto">
+                        <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/ashwagandha.png"
+                            alt="Ashwagandha">
+                    </span>
+                    <p class="plant-name absolute -bottom-14 sm:-bottom-10">Ashwagandha</p>
+                </div>
             </a>
             <a href="plant-details.jsp?plant=2">
-            <div
-                class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
-                <span class="self-center m-auto">
-                    <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/curcuma.png" alt="Curcuma Longa">
-                </span>
-                <p class="plant-name absolute -bottom-14 sm:-bottom-10">Curcuma Longa</p>
-            </div>
+                <div
+                    class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
+                    <span class="self-center m-auto">
+                        <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/curcuma.png"
+                            alt="Curcuma Longa">
+                    </span>
+                    <p class="plant-name absolute -bottom-14 sm:-bottom-10">Curcuma Longa</p>
+                </div>
             </a>
             <a href="plant-details.jsp?plant=3">
-            <div
-                class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
-                <span class="self-center m-auto">
-                    <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/saunf.png" alt="Saunf">
-                </span>
-                <p class="plant-name absolute -bottom-14 sm:-bottom-10">Saunf</p>
-            </div>
+                <div
+                    class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
+                    <span class="self-center m-auto">
+                        <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/saunf.png"
+                            alt="Saunf">
+                    </span>
+                    <p class="plant-name absolute -bottom-14 sm:-bottom-10">Saunf</p>
+                </div>
             </a>
             <a href="plant-details.jsp?plant=4">
-            <div
-                class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
-                <span class="self-center m-auto">
-                    <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/shatavari.png" alt="Shatavari">
-                </span>
-                <p class="plant-name absolute -bottom-14 sm:-bottom-10">Shatavari</p>
-            </div>
+                <div
+                    class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
+                    <span class="self-center m-auto">
+                        <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/shatavari.png"
+                            alt="Shatavari">
+                    </span>
+                    <p class="plant-name absolute -bottom-14 sm:-bottom-10">Shatavari</p>
+                </div>
             </a>
             <a href="plant-details.jsp?plant=5">
-            <div
-                class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
-                <span class="self-center m-auto">
-                    <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/sarson.png" alt="Sarson">
-                </span>
-                <p class="plant-name absolute -bottom-14 sm:-bottom-10">Sarson</p>
-            </div>
+                <div
+                    class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
+                    <span class="self-center m-auto">
+                        <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/sarson.png"
+                            alt="Sarson">
+                    </span>
+                    <p class="plant-name absolute -bottom-14 sm:-bottom-10">Sarson</p>
+                </div>
             </a>
         </section>
-        <div class="text-center mt-24">
+        <div class="flex flex-col justify-center items-center mt-24">
             <a href="#" class="montserrat text-lg m-auto underline" target="_blank" rel="noopener noreferrer">Browse
                 More
                 Plants</a>
         </div>
     </section>
+
+    <!-- Lord Shiva -->
+    <section>
+        <!-- Image -->
+        <div
+            class="lord-shiva min-h-[300px] min-w-[300px] bg-center md:min-h-[400px] md:min-w-[670px] m-10 lg:m-20 2xl:aspect-[20/6] bg-cover 2xl:bg-contain">
+        </div>
+        <!-- Qoute -->
+        <div class="mx-20 md:mx-32 xl:mx-60 2xl:mx-72 flex flex-col justify-center items-center lg:mt-[-40px]">
+            <p class="lora md:text-lg xl:text-xl text-center">Lorem ipsum dolor sit amet consectetur. Vitae fermentum sed
+                pellentesque feugiat.
+                Fringilla tincidunt
+                posuere donec congue amet integer elit bibendum.</p>
+            <p class="lora md:text-xl xl:text-2xl font-semibold mt-4">- Some Person</p>
+        </div>
+        <!-- <div>
+            <span class="slide-indicator"></span>
+        </div> -->
+    </section>
+
+    <!-- Medical Use and Places of plant-->
+    <section class="w-full flex flex-col md:flex-row justify-evenly items-center gap-x-10 mt-20 p-5">
+        <div class="flex flex-col gap-y-14 lg:gap-y-20 justify-self-end">
+            <h1 class="lora text-3xl text-center">Medical use</h1>
+            <div class="grid grid-cols-2 grid-rows-2 gap-28 md:gap-20 lg:gap-40">
+                <span class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100" alt="">
+                    Ashwagandha
+                </span>
+                <span class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100" alt="">
+                    Shatavari
+                </span>
+                <span class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100" alt="">
+                    Ashwagandha
+                </span>
+                <span class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100" alt="">
+                    Shatavari
+                </span>
+            </div>
+            <a href="" target="_blank" rel="noopener noreferrer" class="underline mx-auto text-lg">Find more medical uses >></a>
+        </div>
+        <!-- vertical line -->
+        <span class="h-24 md:h-40 w-[1px] bg-gray-900 m opacity-0 md:opacity-100"></span>
+        <div class="flex flex-col gap-y-14 lg:gap-y-20 justify-self-end">
+            <h1 class="lora text-3xl text-center">Places to find</h1>
+            <div class="grid grid-cols-2 grid-rows-2 gap-28 md:gap-20 lg:gap-40">
+                <span class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100" alt="">
+                    Ashwagandha
+                </span>
+                <span class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100" alt="">
+                    Shatavari
+                </span>
+                <span class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100" alt="">
+                    Ashwagandha
+                </span>
+                <span class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100" alt="">
+                    Shatavari
+                </span>
+            </div>
+            <a href="" target="_blank" rel="noopener noreferrer" class="underline mx-auto text-lg">Explore more places >></a>
+        </div>
+    </section>
+
+    <!-- divider -->
+    <div class="flex justify-center my-28 md:mt-10">
+        <svg width="180" height="2" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="1" x2="180" y2="1" stroke="black" stroke-width="2" stroke-dasharray="4 8 12 16" />
+        </svg>
+    </div>
 
     <!-- Collaboration -->
     <section class="w-full my-20">
@@ -211,10 +295,10 @@
             <span class="w-64 sm:w-60 lg:w-72 2xl:w-96"><img src="images/AIIA.png"
                     alt="All India Institute of Ayurveda"></span>
         </div>
-        <div class="mt-24 text-center">
-            <h2 class="lora font-semibold text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl mx-2">To Spread awareness and
+        <div class="mt-24 flex flex-col justify-center items-center">
+            <h2 class="lora font-semibold text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl mx-2 text-center">To Spread awareness and
                 importance of Ayurveda</h2>
-            <p class="montserrat px-[20%] text-sm lg:text-base 2xl:text-xl mt-5">Ayurveda translates to knowledge of
+            <p class="montserrat px-[20%] text-sm lg:text-base 2xl:text-xl mt-5 text-center">Ayurveda translates to knowledge of
                 life. Based on the idea that disease is due to an imbalance or stress in a person's consciousness,
                 Ayurveda encourages certain lifestyle interventions and natural therapies to regain a balance between
                 the body, mind, spirit, and the environment.</p>
@@ -240,8 +324,8 @@
                         rel="noopener noreferrer">AIIA</a></li>
             </ul>
         </div>
-        <hr width="100%" style="height:1px;border-width:0;color:gray;background-color:gray;">
-        <p class="text-center text-lg">Copyright &#169; 2022-2023</p>
+        <hr width="100%" style="height:1px;border-width:0;background-color:gray;">
+        <p class="flex flex-col justify-center items-center text-lg">Copyright &#169; 2022-2023</p>
     </footer>
     <script src="js/script.js"></script>
 </body>
