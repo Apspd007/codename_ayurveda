@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Lora&family=Montserrat&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/ggu-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/ggu-logo.png" type="image/x-icon">
     <title>Ayurveda</title>
 </head>
 
@@ -20,9 +20,9 @@
     <section class="lg:hidden flex flex-col w-full bg-white border-b gap-y-4">
         <header class=" w-full px-10 flex justify-between items-center md:flex-row flex-col gap-y-4">
             <div onclick="blankRedirect('https://www.ggu.ac.in/')" class="cursor-pointer"><img
-                    class="max-h-[70px] object-cover" src="images/ggu-image.png"></div>
+                    class="max-h-[70px] object-cover" src="../images/ggu-image.png"></div>
             <div onclick="blankRedirect('https://aiia.gov.in/')" class="cursor-pointer"><img
-                    class="max-h-[60px] object-cover" src="images/aiia-image.png"></div>
+                    class="max-h-[60px] object-cover" src="../images/aiia-image.png"></div>
         </header>
 
         <!-- Logo and navigation -->
@@ -50,16 +50,17 @@
 
         <header class="w-full h-[90px] px-10 flex justify-between items-center ">
             <div onclick="blankRedirect('https://www.ggu.ac.in/')" class="cursor-pointer"><img
-                    class="2xl:h-[90px] max-h-[90px] object-cover" src="images/ggu-image.png"></div>
-            <img class="h-28 object-cover cursor-pointer" onclick="redirectHome()" src="images/gg.png">
+                    class="2xl:h-[90px] max-h-[90px] object-cover" src="../images/ggu-image.png"></div>
+            <img class="h-28 object-cover cursor-pointer" onclick="redirectHome()" src="../images/gg.png">
             <div onclick="blankRedirect('https://aiia.gov.in/')" class="cursor-pointer"><img
-                    class="2xl:h-[90px] max-h-[90px] object-cover" src="images/aiia-image.png"></div>
+                    class="2xl:h-[90px] max-h-[90px] object-cover" src="../images/aiia-image.png"></div>
         </header>
 
         <!-- Logo and navigation -->
         <div class="flex justify-between items-end">
             <span class="xl:ml-[12%]">
-                <img class="filter invert" src="images/ayurveda-logo.png" alt="Ayurveda Logo" width="250" height="60">
+                <img class="filter invert" src="../images/ayurveda-logo.png" alt="Ayurveda Logo" width="250"
+                    height="60">
             </span>
             <nav class=" flex w-min items-center self-end justify-end gap-x-7 py-1 pl-14 px-10">
                 <div onclick="redirectHome()"
@@ -78,7 +79,7 @@
                     </button>
                     <!-- the menu here -->
                     <div id="menu-item-administration" class="hidden peer-hover:grid hover:grid grid-flow-row
-                         bg-white drop-shadow-lg absolute z-10">
+                     bg-white drop-shadow-lg absolute z-10">
                         <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/visitor.html">Visitor</a>
                         <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/chancellor.html">Chancellor</a>
                         <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/vice-chancellor.html">Vice
@@ -92,47 +93,49 @@
     </section>
     <!-- header end -->
 
+    <section>
+        <div class="px-10 py-12 h-full">
+            <div class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
+                <div class="md:w-10/12 lg:w-10/12 lg:ml-20">
 
-    <!-- team section -->
-    <section class="my-20">
-        <!-- title -->
-        <div class="text-center">
-            <h2 class="lora text-center text-3xl 2xl:text-4xl ">Our Team</h2>
-            <p class="montserrat px-[20%] text-base 2xl:text-xl mt-5">Lorem ipsum dolor sit amet consectetur.
-                Risus vitae et cras non amet nisl neque commodo nisi. Risus sit egestas solli citudin duis egestas neque
-                nibh sollicitudin fames.</p>
-        </div>
-        <!-- team -->
-        <div class="mt-36 sm:mt-48 grid grid-cols-1 sm:grid-cols-2 gap-y-40 justify-items-center items-center">
-            <div class="w-48 2xl:w-56 h-36 rounded-xl bg-gray-200">
-                <img class="m-auto -translate-y-24" src="images/team/member-1.png" alt="team member" />
-                <div class="w-full h-full flex flex-col justify-center items-center translate-y-[-120px]">
-                    <h4>Thanendra Kashyap</h4>
-                    <p>Developer <br /> (Backend)</p>
-                </div>
-            </div>
-            <div
-                class="w-48 2xl:w-56 h-36 rounded-xl col-start-1 col-end-2 sm:col-end-3 row-start-1 row-end-2 bg-gray-200">
-                <img class="m-auto -translate-y-24" src="images/team/team-led.png" alt="team leader">
-                <div class="w-full h-full flex flex-col justify-center items-center translate-y-[-120px]">
-                    <h4>Sushma Jaiswal</h4>
-                    <p>Project Head</p>
-                </div>
-            </div>
-            <div class="w-48 2xl:w-56 h-36 rounded-xl bg-gray-200">
-                <img class="m-auto -translate-y-24" src="images/team/member-2.png" alt="team member" />
-                <div class="w-full h-full flex flex-col justify-center items-center translate-y-[-120px]">
-                    <h4>Tushar Kashyap</h4>
-                    <p>Developer <br /> (Frontend)</p>
+                    <div class="my-4 mb-10 text-xl uppercase underline underline-offset-4">Message from Chancellor</div>
+
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-20">
+                        <img class="rounded-full w-48  object-contain mb-auto"
+                            src="https://www.ggu.ac.in/Admin/Files/Photo/02252021031408_Chancellor_Prof_Ashok_Modak.jpg"
+                            alt="President of India, Smt. Droupadi Murmu">
+
+                        <div class="flex flex-col gap-4">
+                            <p>Dear faculty members, officers, and students,
+                                <br />
+                                <br />
+                                Please accept best wishes from me in the 125th year of Swami Vivekananda's historical
+                                Chicago - Speech. Swami has asked us to pay due attention to Dharma, as much attention
+                                as much as to Mukti. He has asked us, in other words, to take unattached interest in the
+                                worldly affairs. Universities in India are therefore expected to impart education
+                                conducive to imbibe significance of unattached involvement in worldly affairs. I am sure
+                                that all of you are doing full justice to this expectation.
+                                <br />
+                                <br />
+                                We, the members of the family of Guru Ghasidas Vishwavidyalaya must carry forward and
+                                enrich the sacred legacy of Swami Vivekananda.
+                            </p>
+                            <span class="font-bold">Yours,<br />Prof. Ashok Modak</span>
+                            <p>Chancellor, GGV</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
 
+
+
     <!-- footer -->
     <footer class="h-[30vh] bg-gray-200 py-4 flex flex-col justify-end items-center">
         <div class="w-full mb-auto grid grid-cols-2 justify-between">
-            <div><img class="invert" src="images/ayurveda-logo.png" alt="Ayurveda logo"></div>
+            <div><img class="invert" src="../images/ayurveda-logo.png" alt="Ayurveda logo"></div>
             <ul class="justify-self-end mx-5 md:mx-10 lg:mx-40">
                 <li>More Links</li>
                 <li><a href="https://www.ggu.ac.in/" class="underline text-blue-500" target="_blank"
@@ -145,6 +148,17 @@
         <p class="text-center text-lg">Copyright &#169; 2022-2023</p>
     </footer>
     <script src="js/script.js"></script>
+
+    <!-- Required popper.js -->
+    <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        var tooltipTriggerList = [].slice.call(
+            document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        );
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new Tooltip(tooltipTriggerEl);
+        });
+    </script>
 </body>
 
 </html>

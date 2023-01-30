@@ -41,7 +41,7 @@
                     class="nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
                     Academic</div>
                 <div
-                    class="nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
                     Administration</div>
             </nav>
         </div>
@@ -77,9 +77,21 @@
                     <div
                         class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
                         Academic</div>
-                    <div
-                        class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
-                        Administration</div>
+                    <div>
+                        <button id="menu-administration"
+                            class="peer nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                            Administration
+                        </button>
+                        <!-- the menu here -->
+                        <div id="menu-item-administration" class="hidden peer-hover:grid hover:grid grid-flow-row
+                     bg-white drop-shadow-lg absolute z-10">
+                            <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/visitor.html">Visitor</a>
+                            <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/chancellor.html">Chancellor</a>
+                            <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/vice-chancellor.html">Vice
+                                Chancellor</a>
+                            <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/registrar.html">Registrar</a>
+                        </div>
+                    </div>
                 </nav>
             </div>
 
@@ -131,7 +143,8 @@
     <section class="plant-section px-6 py-10 sm:px-16 md:px-20 lg:px-32 xl:px-48 2xl:px-64 pt-10 lg:pt-12 2xl:pt-16">
         <div>
             <h2 class="plant-title text-3xl xl:text-4xl 2xl:text-5xl tracking-wider pb-5">Useful Plants</h2>
-            <p class="plant-subtitle tracking-wider text-base 2xl:text-lg text-center">Lorem ipsum dolor sit amet consectetur. Risus
+            <p class="plant-subtitle tracking-wider text-base 2xl:text-lg text-center">Lorem ipsum dolor sit amet
+                consectetur. Risus
                 vitae et cras non
                 amet nisl neque
                 commodo nisi. Risus sit egestas solli citudin duis egestas neque nibh sollicitudin fames. lorem ipsum
@@ -216,7 +229,8 @@
         </div>
         <!-- Qoute -->
         <div class="mx-20 md:mx-32 xl:mx-60 2xl:mx-72 flex flex-col justify-center items-center lg:mt-[-40px]">
-            <p class="lora md:text-lg xl:text-xl text-center">Lorem ipsum dolor sit amet consectetur. Vitae fermentum sed
+            <p class="lora md:text-lg xl:text-xl text-center">Lorem ipsum dolor sit amet consectetur. Vitae fermentum
+                sed
                 pellentesque feugiat.
                 Fringilla tincidunt
                 posuere donec congue amet integer elit bibendum.</p>
@@ -232,48 +246,66 @@
         <div class="flex flex-col gap-y-14 lg:gap-y-20 justify-self-end">
             <h1 class="lora text-3xl text-center">Medical use</h1>
             <div class="grid grid-cols-2 grid-rows-2 gap-28 md:gap-20 lg:gap-40">
-                <span class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
-                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100" alt="">
+                <span
+                    class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100"
+                        alt="">
                     Ashwagandha
                 </span>
-                <span class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
-                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100" alt="">
+                <span
+                    class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100"
+                        alt="">
                     Shatavari
                 </span>
-                <span class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
-                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100" alt="">
+                <span
+                    class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100"
+                        alt="">
                     Ashwagandha
                 </span>
-                <span class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
-                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100" alt="">
+                <span
+                    class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100"
+                        alt="">
                     Shatavari
                 </span>
             </div>
-            <a href="" target="_blank" rel="noopener noreferrer" class="underline mx-auto text-lg">Find more medical uses >></a>
+            <a href="" target="_blank" rel="noopener noreferrer" class="underline mx-auto text-lg">Find more medical
+                uses >></a>
         </div>
         <!-- vertical line -->
         <span class="h-24 md:h-40 w-[1px] bg-gray-900 m opacity-0 md:opacity-100"></span>
         <div class="flex flex-col gap-y-14 lg:gap-y-20 justify-self-end">
             <h1 class="lora text-3xl text-center">Places to find</h1>
             <div class="grid grid-cols-2 grid-rows-2 gap-28 md:gap-20 lg:gap-40">
-                <span class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
-                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100" alt="">
+                <span
+                    class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100"
+                        alt="">
                     Ashwagandha
                 </span>
-                <span class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
-                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100" alt="">
+                <span
+                    class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100"
+                        alt="">
                     Shatavari
                 </span>
-                <span class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
-                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100" alt="">
+                <span
+                    class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100"
+                        alt="">
                     Ashwagandha
                 </span>
-                <span class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
-                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100" alt="">
+                <span
+                    class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100"
+                        alt="">
                     Shatavari
                 </span>
             </div>
-            <a href="" target="_blank" rel="noopener noreferrer" class="underline mx-auto text-lg">Explore more places >></a>
+            <a href="" target="_blank" rel="noopener noreferrer" class="underline mx-auto text-lg">Explore more places
+                >></a>
         </div>
     </section>
 
@@ -296,9 +328,11 @@
                     alt="All India Institute of Ayurveda"></span>
         </div>
         <div class="mt-24 flex flex-col justify-center items-center">
-            <h2 class="lora font-semibold text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl mx-2 text-center">To Spread awareness and
+            <h2 class="lora font-semibold text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl mx-2 text-center">To Spread
+                awareness and
                 importance of Ayurveda</h2>
-            <p class="montserrat px-[20%] text-sm lg:text-base 2xl:text-xl mt-5 text-center">Ayurveda translates to knowledge of
+            <p class="montserrat px-[20%] text-sm lg:text-base 2xl:text-xl mt-5 text-center">Ayurveda translates to
+                knowledge of
                 life. Based on the idea that disease is due to an imbalance or stress in a person's consciousness,
                 Ayurveda encourages certain lifestyle interventions and natural therapies to regain a balance between
                 the body, mind, spirit, and the environment.</p>

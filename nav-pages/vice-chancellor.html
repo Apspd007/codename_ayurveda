@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Lora&family=Montserrat&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../images/ggu-logo.png" type="image/x-icon">
+    <title>Ayurveda</title>
+</head>
+
+<body onload="init()">
+    <!-- mobile and tablet header -->
+    <section class="lg:hidden flex flex-col w-full bg-white border-b gap-y-4">
+        <header class=" w-full px-10 flex justify-between items-center md:flex-row flex-col gap-y-4">
+            <div onclick="blankRedirect('https://www.ggu.ac.in/')" class="cursor-pointer"><img
+                    class="max-h-[70px] object-cover" src="../images/ggu-image.png"></div>
+            <div onclick="blankRedirect('https://aiia.gov.in/')" class="cursor-pointer"><img
+                    class="max-h-[60px] object-cover" src="../images/aiia-image.png"></div>
+        </header>
+
+        <!-- Logo and navigation -->
+        <div class="flex justify-end bg-white items-end">
+            <nav class=" flex w-min items-center self-end justify-end gap-x-7 py-1 pl-14 px-10">
+                <div
+                    class="nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    Home</div>
+                <div
+                    class="nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    About</div>
+                <div
+                    class="nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    Academic</div>
+                <div
+                    class="nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    Administration</div>
+            </nav>
+        </div>
+
+    </section>
+
+    <!-- header -->
+    <section class="hidden header-section h-[160px] lg:flex flex-col justify-between">
+
+        <header class="w-full h-[90px] px-10 flex justify-between items-center ">
+            <div onclick="blankRedirect('https://www.ggu.ac.in/')" class="cursor-pointer"><img
+                    class="2xl:h-[90px] max-h-[90px] object-cover" src="../images/ggu-image.png"></div>
+            <img class="h-28 object-cover cursor-pointer" onclick="redirectHome()" src="../images/gg.png">
+            <div onclick="blankRedirect('https://aiia.gov.in/')" class="cursor-pointer"><img
+                    class="2xl:h-[90px] max-h-[90px] object-cover" src="../images/aiia-image.png"></div>
+        </header>
+
+        <!-- Logo and navigation -->
+        <div class="flex justify-between items-end">
+            <span class="xl:ml-[12%]">
+                <img class="filter invert" src="../images/ayurveda-logo.png" alt="Ayurveda Logo" width="250"
+                    height="60">
+            </span>
+            <nav class=" flex w-min items-center self-end justify-end gap-x-7 py-1 pl-14 px-10">
+                <div onclick="redirectHome()"
+                    class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    Home</div>
+                <div
+                    class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    About</div>
+                <div
+                    class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    Academic</div>
+                <div>
+                    <button id="menu-administration"
+                        class="peer nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                        Administration
+                    </button>
+                    <!-- the menu here -->
+                    <div id="menu-item-administration" class="hidden peer-hover:grid hover:grid grid-flow-row
+                     bg-white drop-shadow-lg absolute z-10">
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/visitor.html">Visitor</a>
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/chancellor.html">Chancellor</a>
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/vice-chancellor.html">Vice
+                            Chancellor</a>
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/registrar.html">Registrar</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </section>
+    <!-- header end -->
+
+    <section>
+        <div class="px-10 py-12 h-full">
+            <div class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
+                <div class="md:w-10/12 lg:w-10/12 lg:ml-20">
+
+                    <div class="my-4 mb-10 text-xl uppercase underline underline-offset-4">Message from Vice Chancellor
+                    </div>
+
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-20">
+                        <img class="rounded-full w-48  object-contain mb-auto"
+                            src="https://www.ggu.ac.in/Admin/Files/Photo/06172022115546_VC_Alok2.jpeg"
+                            alt="President of India, Smt. Droupadi Murmu">
+
+                        <div class="flex flex-col gap-4">
+                            <p>I feel immense pleasure and a sense of responsibility on being appointed as the
+                                Vice-Chancellor of this temple of learning named after the great saint, Baba Guru
+                                Ghasidasji, who descended on the pious land of Chhattisgarh. Guru Ghasidas Central
+                                University is the Central University of Chhattisgarh which bears the important charge of
+                                providing job-oriented education, taking care of the educational aspirations,
+                                dissemination of quality education and enlightenment of the people of local society and
+                                remote areas. We shall make efforts in a comprehensive manner to grow this University,
+                                named after the great saint Baba Guru Ghasidasji, like a banyan tree of higher learning
+                                at national and international level.
+                                <br><br>
+                                I communicate, at the start of the new academic session 2021-2022, my best wishes to all
+                                the teachers, officers, employees, research scholars, and students of the university.
+                                There are prospects, opportunities, and aims available for us, by pursuing which we will
+                                stand at par with the leading universities of the country. Infrastructure development
+                                along with improvement in academic quality, and development of new dimensions of
+                                research and innovation are the foremost in our priorities.
+                                <br><br>
+                                Smooth implementation of various ambitious plans of Government of India such as ‘Ek
+                                Bharat, Shrestha Bharat’, ‘Unnat Bharat Abhiyan’, National Service Scheme (NSS),
+                                National Cadet Corps (NCC), and ‘Swachata Abhiyan’ will be ensured. A new milestone will
+                                be established in the area of interdisciplinary research with 3 MV high-current
+                                pelletron accelerator project.
+                                <br><br>
+                                A University is a place of global learning across all disciplines. Our Prime Minister,
+                                Shri Narendra Modi Ji, declared ‘National Education Policy-2020’ on 29th July, 2020,
+                                keeping in mind the holistic approach of education from the pre-primary to the
+                                post-graduate and research level. It is my firm opinion that ‘National Education
+                                Policy-2020’ will be a game changer for India at national and international level,
+                                leading to all kinds of social, economic, political and strategic growth. The entire
+                                nation is dedicated to implementing ‘NEP-2020’ in a complete manner. Our Prime Minister
+                                has addressed the nation and informed about the regress of the implementation of
+                                NEP-2020 on its anniversary day, 29th July 2021, for its effective follow-up.
+                                <br><br>
+                                I look forward to an unconditional support and cooperation from all stakeholders to
+                                enhance the quality and standard of higher education at Guru Ghasidas Vishwavidyalaya,
+                                Bilaspur. I am sure that our honest and combined efforts for the progress of Guru
+                                Ghasidas Vishwavidyalaya will certainly result in setting a new benchmark in the field
+                                of higher education.
+                                <br><br>
+                                I request philanthropist, industrialist, alumni and pillars of the society to donate
+                                profusely to Guru Ghasidas Vishwavidyalaya for the cause of betterment of higher
+                                education and of the student perusing their studies on the campus. I welcome innovative
+                                ideas for the growth of the students of Guru Ghasidas Vishwavidyalaya and of the society
+                                in a holistic manner. The region surrounding Bilaspur in Chhattisgarh state is in dire
+                                need of good industries and financial institutions. I will appreciate industries for
+                                helping with their cooperation in creating a strong industry-institution interaction
+                                with the University. The underlying idea of the said efforts is to ensure that
+                                well-rounded graduates come out of Guru Ghasidas Vishwavidyalaya.
+                                <br><br>
+                                I am open to all good and innovative suggestions for the betterment of Guru Ghasidas
+                                Vishwavidyalaya and its students. I look forward once again to the institutions of
+                                higher education and learning, research institutes, industries, FICCI, ASSOCHAM, local
+                                Chamber of Commerce, professional bodies, Municipal Corporation of Bilaspur, Local and
+                                State Administration and all stakeholders for their kind cooperation in the growth and
+                                development of Guru Ghasidas Vishwavidyalaya.
+                            </p>
+                            <span class="font-bold">Professor Alok Kumar Chakrawal</span>
+                            <p>Vice Chancellor of Guru Ghasidas Vishwavidyalaya (Central University )</p>
+                            <p>Email - alochak69@gmail.com</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- footer -->
+    <footer class="h-[30vh] bg-gray-200 py-4 flex flex-col justify-end items-center">
+        <div class="w-full mb-auto grid grid-cols-2 justify-between">
+            <div><img class="invert" src="../images/ayurveda-logo.png" alt="Ayurveda logo"></div>
+            <ul class="justify-self-end mx-5 md:mx-10 lg:mx-40">
+                <li>More Links</li>
+                <li><a href="https://www.ggu.ac.in/" class="underline text-blue-500" target="_blank"
+                        rel="noopener noreferrer">GGU</a></li>
+                <li><a href="https://aiia.gov.in/" class="underline text-blue-500" target="_blank"
+                        rel="noopener noreferrer">AIIA</a></li>
+            </ul>
+        </div>
+        <hr width="100%" style="height:1px;border-width:0;color:gray;background-color:gray;">
+        <p class="text-center text-lg">Copyright &#169; 2022-2023</p>
+    </footer>
+    <script src="js/script.js"></script>
+
+    <!-- Required popper.js -->
+    <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        var tooltipTriggerList = [].slice.call(
+            document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        );
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new Tooltip(tooltipTriggerEl);
+        });
+    </script>
+</body>
+
+</html>
