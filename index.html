@@ -71,15 +71,24 @@
                     <div onclick="redirectHome()"
                         class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
                         Home</div>
-                    <div
-                        class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
-                        About</div>
+                    <div>
+                        <button id="menu-about"
+                            class="peer nav-font-size cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                            About
+                        </button>
+                        <!-- the menu here -->
+                        <div id="menu-item-about" class="hidden peer-hover:grid hover:grid grid-flow-row
+                         bg-white drop-shadow-lg absolute z-10">
+                            <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/about-ggu.html">About GGU</a>
+                            <a class="px-5 py-3 hover:bg-gray-200" href="https://aiia.gov.in/about/">About AIIA</a>
+                        </div>
+                    </div>
                     <div
                         class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
                         Academic</div>
                     <div>
                         <button id="menu-administration"
-                            class="peer nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                            class="peer nav-font-size cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
                             Administration
                         </button>
                         <!-- the menu here -->
@@ -215,7 +224,8 @@
             </a>
         </section>
         <div class="flex flex-col justify-center items-center mt-24">
-            <a href="plants-list.html" class="montserrat text-lg m-auto underline" target="_blank" rel="noopener noreferrer">Browse
+            <a href="plants-list.html" class="montserrat text-lg m-auto underline" target="_blank"
+                rel="noopener noreferrer">Browse
                 More
                 Plants</a>
         </div>

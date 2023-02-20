@@ -12,10 +12,10 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="../images/ggu-logo.png" type="image/x-icon">
-    <title>Ayurveda</title>
+    <title>About GGU</title>
 </head>
 
-<body onload="init()">
+<body>
     <!-- mobile and tablet header -->
     <section class="lg:hidden flex flex-col w-full bg-white border-b gap-y-4">
         <header class=" w-full px-10 flex justify-between items-center md:flex-row flex-col gap-y-4">
@@ -66,25 +66,34 @@
                 <div onclick="redirectHome()"
                     class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
                     Home</div>
-                <div
-                    class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
-                    About</div>
+                <div>
+                    <button id="menu-about"
+                        class="peer nav-font-size cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                        About
+                    </button>
+                    <!-- the menu here -->
+                    <div id="menu-item-about" class="hidden peer-hover:grid hover:grid grid-flow-row
+                         bg-white drop-shadow-lg absolute z-10">
+                        <a class="px-5 py-3 hover:bg-gray-200" href="../nav-pages/about-ggu.html">About GGU</a>
+                        <a class="px-5 py-3 hover:bg-gray-200" href="https://aiia.gov.in/about/">About AIIA</a>
+                    </div>
+                </div>
                 <div
                     class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
                     Academic</div>
                 <div>
                     <button id="menu-administration"
-                        class="peer nav-font-size cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                        class="peer nav-font-size cursor-pointer text-xl px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
                         Administration
                     </button>
                     <!-- the menu here -->
                     <div id="menu-item-administration" class="hidden peer-hover:grid hover:grid grid-flow-row
-                     bg-white drop-shadow-lg absolute z-10">
-                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/visitor.html">Visitor</a>
-                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/chancellor.html">Chancellor</a>
-                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/vice-chancellor.html">Vice
+                         bg-white drop-shadow-lg absolute z-10">
+                        <a class="px-5 py-3 hover:bg-gray-200" href="../nav-pages/visitor.html">Visitor</a>
+                        <a class="px-5 py-3 hover:bg-gray-200" href="../nav-pages/chancellor.html">Chancellor</a>
+                        <a class="px-5 py-3 hover:bg-gray-200" href="../nav-pages/vice-chancellor.html">Vice
                             Chancellor</a>
-                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/registrar.html">Registrar</a>
+                        <a class="px-5 py-3 hover:bg-gray-200" href="../nav-pages/registrar.html">Registrar</a>
                     </div>
                 </div>
             </nav>
@@ -93,60 +102,35 @@
     </section>
     <!-- header end -->
 
-    <!-- data entry -->
-    <section class="my-20">
-        <div class="px-6 py-12 h-full">
+    <section>
+        <div class="px-6 py-20 h-full">
             <div class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
-                <div class="md:w-8/12 lg:w-5/12 lg:ml-20">
-                    <form>
-                        <h2 class="IBM-Plex text-center text-2xl leading-[5rem]">Add Plant Data</h2>
+                <div class="md:w-10/12 lg:w-8/12 lg:ml-20">
 
-                        <!-- Plant Name -->
-                        <div class="mb-6">
-                            <label for="plant_name" class="form-label inline-block mb-2 text-xl text-gray-700">Plant
-                                Name</label>
-                            <input type="text"
-                                class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                                id="plant_name" name="plant_name" placeholder="ex. Sarso" required />
+                    <div class="my-4 mb-10 text-2xl underline underline-offset-8">GGV at a glance</div>
+
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-20">
+                        <img class="rounded-full w-48  object-contain"
+                            src="https://www.ggu.ac.in/Assets/images/college-icon.jpg" alt="GGU main gate">
+
+                        <div class="flex flex-col gap-4">
+                            <p>
+                                Guru Ghasidas Vishwavidyalaya, is a Central University of India, located in Bilaspur
+                                C.G. State, established under Central Universities Act 2009, No. 25 of 2009. Formerly
+                                called Guru Ghasidas University (GGU), established by an Act of the State Legislative
+                                Assembly, was formally inaugurated on June 16, 1983.
+                                <br><br>
+                                GGU is an active member of the Association of Indian Universities and Association of
+                                Commonwealth Universities. Situated in a socially and economically challenged area, the
+                                university is appropriately named to honor the great Satnami Saint Guru Ghasidas (born
+                                in 17th century), who championed the cause of the downtrodden and waged a relentless
+                                struggle against all forms of social evils and injustice prevailing in the society.
+                                <br><br>
+                                The University is a residential Institution.
+                            </p>
                         </div>
+                    </div>
 
-                        <!-- Plant desc -->
-                        <label for="plant_desc" class="form-label inline-block mb-2 text-gray-700">Plant
-                            Description</label>
-                        <div class="mb-6">
-                            <input type="text"
-                                class="form-control block w-full px-4 py-2 font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                                id="plant_desc" name="plant_desc" placeholder="Plant Description" required />
-                        </div>
-
-
-                        <!-- Plant image -->
-                        <label for="plant_img" class="form-label inline-block mb-2 text-gray-700">Plant Image</label>
-                        <div class="mb-6">
-                            <input type="file"
-                                class="form-control block w-full font-normal text-gray-700 bg-white bg-clip-padding transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                                id="plant_img" name="plant_img" placeholder="Page number of plant in pdf" required />
-                        </div>
-
-                        <!-- plant data in pdf -->
-                        <label for="page_no" class="form-label inline-block mb-2 text-gray-700">Plant pdf</label>
-                        <div class="mb-6">
-                            <!-- <input type="text"
-                                    class="form-control block w-full px-4 py-2 font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                                    id="page_no" name="page_no" placeholder="Page number of plant in pdf" required/> -->
-                            <input type="file"
-                                class="form-control block w-full font-normal text-gray-700 bg-white bg-clip-padding transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                                id="plant_img" name="plant_img" placeholder="Page number of plant in pdf" required />
-                        </div>
-
-                        <!-- Submit button -->
-                        <button type="submit"
-                            class="inline-block px-7 py-3 bg-blue-600 text-white font-medium leading-snug rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full"
-                            data-mdb-ripple="true" data-mdb-ripple-color="light">
-                            Add Plant
-                        </button>
-
-                    </form>
                 </div>
             </div>
         </div>
@@ -169,7 +153,8 @@
         <hr width="100%" style="height:1px;border-width:0;color:gray;background-color:gray;">
         <p class="text-center text-lg">Copyright &#169; 2022-2023</p>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
+
 
     <!-- Required popper.js -->
     <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>

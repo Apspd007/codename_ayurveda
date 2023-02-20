@@ -73,7 +73,7 @@ body {
 @media screen and (min-width: 1536px) {
 
     .plant-showcase div:nth-child(2),
-    div:nth-child(5) {
+    .plant-showcase div:nth-child(5) {
         margin-left: 20px;
     }
 

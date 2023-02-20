@@ -41,7 +41,7 @@ function init() {
 
 
 function redirectHome() {
-    document.location.href = "/";
+    document.location.href = "/codename-ayurveda";
 }
 
 function blankRedirect(n) {
