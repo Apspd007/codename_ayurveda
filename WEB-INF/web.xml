@@ -1,0 +1,58 @@
+<web-app>
+
+	<servlet>
+		<servlet-name>Onload</servlet-name>
+		<servlet-class>com.ggv.ayurveda.OnPageLoad</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Onload</servlet-name>
+		<url-pattern>/Onload</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SearchPlants</servlet-name>
+		<servlet-class>com.ggv.ayurveda.SearchPlants</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchPlants</servlet-name>
+		<url-pattern>/SearchPlants</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Viewer</servlet-name>
+		<servlet-class>com.ggv.ayurveda.Viewer</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Viewer</servlet-name>
+		<url-pattern>/Viewer</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DisplayRecentSearch</servlet-name>
+		<servlet-class>com.ggv.ayurveda.DisplayRecentSearch</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DisplayRecentSearch</servlet-name>
+		<url-pattern>/DisplayRecentSearch</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AddSearchSuggestion</servlet-name>
+		<servlet-class>com.ggv.ayurveda.AddSearchSuggestion</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddSearchSuggestion</servlet-name>
+		<url-pattern>/AddSearchSuggestion</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>FilesUpload</servlet-name>
+		<servlet-class>com.ggv.ayurveda.FilesUpload</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FilesUpload</servlet-name>
+		<url-pattern>/FilesUpload</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>

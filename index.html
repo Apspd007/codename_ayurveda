@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Lora&family=Montserrat&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/ggu-logo.png" type="image/x-icon">
+    <title>Ayurveda</title>
+</head>
+
+<body onload="init()">
+    <!-- mobile and tablet header -->
+    <section class="lg:hidden flex flex-col w-full bg-white border-b gap-y-4">
+        <header class="w-full px-2 lg:px-10 flex justify-between items-center md:flex-row flex-col gap-y-4">
+            <div onclick="blankRedirect('https://www.ggu.ac.in/')" class="cursor-pointer"><img
+                    class="max-h-[70px] object-cover" src="images/ggu-image.png"></div>
+
+            <img class="hidden md:block h-20 lg:h-24 object-cover cursor-pointer" onclick="redirectHome()"
+                src="images/gg.png">
+            <div onclick="blankRedirect('https://aiia.gov.in/')" class="cursor-pointer"><img
+                    class="max-h-[60px] object-cover" src="images/aiia-image.png"></div>
+        </header>
+
+        <!-- Logo and navigation -->
+        <div class="flex justify-end bg-white items-end">
+            <nav class=" flex w-min items-center self-end justify-end gap-x-7 py-1 pl-14 px-10">
+                <div
+                    class="nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    Home</div>
+                <div
+                    class="nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    About</div>
+                <div
+                    class="nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    Academic</div>
+                <div
+                    class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    Administration</div>
+            </nav>
+        </div>
+
+    </section>
+
+    <!-- herosection -->
+    <section class="hero-section h-screen min-h-[700px] md:min-h-[860px] lg:min-h-[800px] flex flex-col">
+
+        <!-- header -->
+        <section class="hidden header-section h-[160px] lg:flex flex-col justify-between">
+
+            <header class="w-full px-10 flex justify-between items-center ">
+                <div onclick="blankRedirect('https://www.ggu.ac.in/')" class="cursor-pointer"><img
+                        class="2xl:h-[90px] max-h-[90px] object-cover" src="images/ggu-image.png"></div>
+                <img class="h-24 object-cover cursor-pointer" onclick="redirectHome()" src="images/gg.png">
+                <div onclick="blankRedirect('https://aiia.gov.in/')" class="cursor-pointer"><img
+                        class="2xl:h-[90px] max-h-[90px] object-cover" src="images/aiia-image.png"></div>
+            </header>
+
+            <!-- Logo and navigation -->
+            <div class="flex justify-between items-end">
+                <span class="xl:ml-[12%]">
+                    <img src="images/ayurveda-logo.png" alt="Ayurveda Logo" width="250" height="60">
+                </span>
+                <nav class="flex w-min items-center self-end justify-end gap-x-7 py-1 pl-14 px-10">
+                    <div onclick="redirectHome()"
+                        class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                        Home</div>
+                    <div
+                        class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                        About</div>
+                    <div
+                        class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                        Academic</div>
+                    <div>
+                        <button id="menu-administration"
+                            class="peer nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                            Administration
+                        </button>
+                        <!-- the menu here -->
+                        <div id="menu-item-administration" class="hidden peer-hover:grid hover:grid grid-flow-row
+                     bg-white drop-shadow-lg absolute z-10">
+                            <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/visitor.html">Visitor</a>
+                            <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/chancellor.html">Chancellor</a>
+                            <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/vice-chancellor.html">Vice
+                                Chancellor</a>
+                            <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/registrar.html">Registrar</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+        </section>
+        <!-- header end -->
+
+        <!-- slider -->
+        <section class="my-auto flex flex-col lg:flex-row lg:justify-evenly items-center lg:items-start relative">
+            <!-- images -->
+            <div id="hero-image"
+                class="border-2 border-white rounded-lg w-[90%] sm:w-3/4 lg:w-1/2 xl:w-[42%] 2xl:w-[38%] aspect-[9/7] sm:aspect-[8/5] bg-center bg-cover bg-no-repeat mx-4">
+
+            </div>
+            <!-- text -->
+            <div class="w-3/4 lg:w-2/6 lg:aspect-[4/3] flex flex-col gap-y-10 justify-center mx-4 mt-5 lg:mt-0">
+                <h2 id="image-text"
+                    class="lora lg:text-lg 2xl:text-2xl text-white flex flex-col justify-center items-center lg:text-left text-center">
+                </h2>
+                <p class="text-end lg:text-left"><a href="#"
+                        class="montserrat hidden lg:inline-block text-lg rounded-sm shadow-lg active:bg-gray-300 bg-white text-black px-2">Learn
+                        more</a></p>
+            </div>
+            <div
+                class="w-36 aspect-video self-center my-auto sm:mx-32 sm:absolute  sm:right-0 -bottom-20 md:-bottom-28 2xl:-bottom-14 flex gap-x-5">
+                <div id="previous-btn"
+                    class="w-14 h-14 border rounded-full flex justify-center items-center text-white text-xl cursor-pointer active:bg-gray-900 active:bg-opacity-70">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5" />
+                    </svg>
+                </div>
+                <div id="next-btn"
+                    class="w-14 h-14 border rounded-full flex justify-center items-center text-white text-xl cursor-pointer active:bg-gray-900 active:bg-opacity-70">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+
+    </section>
+    <!-- hero section end -->
+
+    <!-- plant section -->
+    <section class="plant-section px-6 py-10 sm:px-16 md:px-20 lg:px-32 xl:px-48 2xl:px-64 pt-10 lg:pt-12 2xl:pt-16">
+        <div>
+            <h2 class="plant-title text-3xl xl:text-4xl 2xl:text-5xl tracking-wider pb-5">Useful Plants</h2>
+            <p class="plant-subtitle tracking-wider text-base 2xl:text-lg text-center">Lorem ipsum dolor sit amet
+                consectetur. Risus
+                vitae et cras non
+                amet nisl neque
+                commodo nisi. Risus sit egestas solli citudin duis egestas neque nibh sollicitudin fames. lorem ipsum
+                dolor sit amet consectetur. Risus vitae et cras non amet nisl neque commodo nisi. </p>
+        </div>
+        <!-- plant showcase -->
+        <section
+            class="plant-showcase mt-20 grid grid-cols-2 md:grid-cols-3 mx-5 gap-y-32 lg:gap-y-28 gap-x-10 justify-items-center 2xl:justify-items-start">
+            <a href="plant-details.jsp?plant=0">
+                <div
+                    class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
+                    <span class="self-center m-auto">
+                        <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/holy-basil.png"
+                            alt="Holy Basil">
+                    </span>
+                    <p class="plant-name absolute -bottom-14 sm:-bottom-10">Holy Basil</p>
+                </div>
+            </a>
+            <a href="plant-details.jsp?plant=1">
+                <div
+                    class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
+                    <span class="self-center m-auto">
+                        <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/ashwagandha.png"
+                            alt="Ashwagandha">
+                    </span>
+                    <p class="plant-name absolute -bottom-14 sm:-bottom-10">Ashwagandha</p>
+                </div>
+            </a>
+            <a href="plant-details.jsp?plant=2">
+                <div
+                    class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
+                    <span class="self-center m-auto">
+                        <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/curcuma.png"
+                            alt="Curcuma Longa">
+                    </span>
+                    <p class="plant-name absolute -bottom-14 sm:-bottom-10">Curcuma Longa</p>
+                </div>
+            </a>
+            <a href="plant-details.jsp?plant=3">
+                <div
+                    class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
+                    <span class="self-center m-auto">
+                        <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/saunf.png"
+                            alt="Saunf">
+                    </span>
+                    <p class="plant-name absolute -bottom-14 sm:-bottom-10">Saunf</p>
+                </div>
+            </a>
+            <a href="plant-details.jsp?plant=4">
+                <div
+                    class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
+                    <span class="self-center m-auto">
+                        <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/shatavari.png"
+                            alt="Shatavari">
+                    </span>
+                    <p class="plant-name absolute -bottom-14 sm:-bottom-10">Shatavari</p>
+                </div>
+            </a>
+            <a href="plant-details.jsp?plant=5">
+                <div
+                    class="h-28 sm:h-32 lg:h-36 xl:h-40 w-28 sm:w-32 lg:w-36 border border-black rounded-md plant-border flex flex-col relative">
+                    <span class="self-center m-auto">
+                        <img class="plant m-auto w-11/12 xl:w-full" src="images/showcase-plants/thumb/sarson.png"
+                            alt="Sarson">
+                    </span>
+                    <p class="plant-name absolute -bottom-14 sm:-bottom-10">Sarson</p>
+                </div>
+            </a>
+        </section>
+        <div class="flex flex-col justify-center items-center mt-24">
+            <a href="plants-list.html" class="montserrat text-lg m-auto underline" target="_blank" rel="noopener noreferrer">Browse
+                More
+                Plants</a>
+        </div>
+    </section>
+
+    <!-- Lord Shiva -->
+    <section>
+        <!-- Image -->
+        <div
+            class="lord-shiva min-h-[300px] min-w-[300px] bg-center md:min-h-[400px] md:min-w-[670px] m-10 lg:m-20 2xl:aspect-[20/6] bg-cover 2xl:bg-contain">
+        </div>
+        <!-- Qoute -->
+        <div class="mx-20 md:mx-32 xl:mx-60 2xl:mx-72 flex flex-col justify-center items-center lg:mt-[-40px]">
+            <p class="lora md:text-lg xl:text-xl text-center">Lorem ipsum dolor sit amet consectetur. Vitae fermentum
+                sed
+                pellentesque feugiat.
+                Fringilla tincidunt
+                posuere donec congue amet integer elit bibendum.</p>
+            <p class="lora md:text-xl xl:text-2xl font-semibold mt-4">- Some Person</p>
+        </div>
+        <!-- <div>
+            <span class="slide-indicator"></span>
+        </div> -->
+    </section>
+
+    <!-- Medical Use and Places of plant-->
+    <section class="w-full flex flex-col md:flex-row justify-evenly items-center gap-x-10 mt-20 p-5">
+        <div class="flex flex-col gap-y-14 lg:gap-y-20 justify-self-end">
+            <h1 class="lora text-3xl text-center">Medical use</h1>
+            <div class="grid grid-cols-2 grid-rows-2 gap-28 md:gap-20 lg:gap-40">
+                <span
+                    class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100"
+                        alt="">
+                    Ashwagandha
+                </span>
+                <span
+                    class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100"
+                        alt="">
+                    Shatavari
+                </span>
+                <span
+                    class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100"
+                        alt="">
+                    Ashwagandha
+                </span>
+                <span
+                    class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100"
+                        alt="">
+                    Shatavari
+                </span>
+            </div>
+            <a href="" target="_blank" rel="noopener noreferrer" class="underline mx-auto text-lg">Find more medical
+                uses >></a>
+        </div>
+        <!-- vertical line -->
+        <span class="h-24 md:h-40 w-[1px] bg-gray-900 m opacity-0 md:opacity-100"></span>
+        <div class="flex flex-col gap-y-14 lg:gap-y-20 justify-self-end">
+            <h1 class="lora text-3xl text-center">Places to find</h1>
+            <div class="grid grid-cols-2 grid-rows-2 gap-28 md:gap-20 lg:gap-40">
+                <span
+                    class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100"
+                        alt="">
+                    Ashwagandha
+                </span>
+                <span
+                    class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100"
+                        alt="">
+                    Shatavari
+                </span>
+                <span
+                    class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100"
+                        alt="">
+                    Ashwagandha
+                </span>
+                <span
+                    class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center cursor-pointer">
+                    <img class="w-16 h-16 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full " src="https://picsum.photos/100"
+                        alt="">
+                    Shatavari
+                </span>
+            </div>
+            <a href="" target="_blank" rel="noopener noreferrer" class="underline mx-auto text-lg">Explore more places
+                >></a>
+        </div>
+    </section>
+
+    <!-- divider -->
+    <div class="flex justify-center my-28 md:mt-10">
+        <svg width="180" height="2" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="1" x2="180" y2="1" stroke="black" stroke-width="2" stroke-dasharray="4 8 12 16" />
+        </svg>
+    </div>
+
+    <!-- Collaboration -->
+    <section class="w-full my-20">
+        <!-- GGU and AIIA -->
+        <div
+            class="flex flex-col justify-evenly items-center gap-y-10 sm:flex-row sm:justify-center sm:items-center sm:gap-x-20 lg:gap-x-44 2xl:gap-x-60 mx-5">
+            <span class="w-64 sm:w-60 lg:w-72 2xl:w-96"><img src="images/GGU.png"
+                    alt="Guru Ghasidas Vishwavidyalaya"></span>
+            <span class="w-14 sm:w-11 lg:w-14 2xl:w-16"><img src="images/handshake-thin.svg" alt="handshake"></span>
+            <span class="w-64 sm:w-60 lg:w-72 2xl:w-96"><img src="images/AIIA.png"
+                    alt="All India Institute of Ayurveda"></span>
+        </div>
+        <div class="mt-24 flex flex-col justify-center items-center">
+            <h2 class="lora font-semibold text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl mx-2 text-center">To Spread
+                awareness and
+                importance of Ayurveda</h2>
+            <p class="montserrat px-[20%] text-sm lg:text-base 2xl:text-xl mt-5 text-center">Ayurveda translates to
+                knowledge of
+                life. Based on the idea that disease is due to an imbalance or stress in a person's consciousness,
+                Ayurveda encourages certain lifestyle interventions and natural therapies to regain a balance between
+                the body, mind, spirit, and the environment.</p>
+        </div>
+        <div class="mt-32 sm:mt-40 grid grid-cols-2 sm:grid-cols-3 justify-items-center items-center gap-10">
+            <div
+                class="w-32 sm:w-40 lg:w-52 2xl:w-60 h-32  sm:h-40 lg:h-52 2xl:h-60 rounded-xl col-start-1 col-end-3 sm:col-auto  bg-gray-400">
+            </div>
+            <div class="w-32 sm:w-40 lg:w-52 2xl:w-60 h-32  sm:h-40 lg:h-52 2xl:h-60 rounded-xl bg-gray-400"></div>
+            <div class="w-32 sm:w-40 lg:w-52 2xl:w-60 h-32  sm:h-40 lg:h-52 2xl:h-60 rounded-xl bg-gray-400"></div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="h-[30vh] bg-gray-200 py-4 flex flex-col justify-end items-center ">
+
+        <div class="w-full mb-auto grid grid-cols-2 justify-between">
+            <div><img class="invert" src="images/ayurveda-logo.png" alt="Ayurveda logo"></div>
+            <ul class="justify-self-end mx-5 md:mx-10 lg:mx-40">
+                <li>More Links</li>
+                <li><a href="https://www.ggu.ac.in/" class="underline text-blue-500" target="_blank"
+                        rel="noopener noreferrer">GGU</a></li>
+                <li><a href="https://aiia.gov.in/" class="underline text-blue-500" target="_blank"
+                        rel="noopener noreferrer">AIIA</a></li>
+            </ul>
+        </div>
+        <hr width="100%" style="height:1px;border-width:0;background-color:gray;">
+        <p class="flex flex-col justify-center items-center text-lg">Copyright &#169; 2022-2023</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
