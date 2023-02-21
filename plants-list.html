@@ -57,7 +57,7 @@
         <!-- Logo and navigation -->
         <div class="flex justify-between items-end">
             <span class="xl:ml-[12%]">
-                <img class="filter invert" src="../images/ayurveda-logo.png" alt="Ayurveda Logo" width="250"
+                <img class="filter invert" src="images/ayurveda-logo.png" alt="Ayurveda Logo" width="250"
                     height="60">
             </span>
             <nav class=" flex w-min items-center self-end justify-end gap-x-7 py-1 pl-14 px-10">
@@ -113,10 +113,9 @@
             <div class="bg-zinc-300 max-w-xl rounded flex"><img class="mx-4" src="images/search.svg" height="24"
                     width="24" alt="search icon" srcset=""><input id="search_query" list="search_queries"
                     class="bg-zinc-300 text-black w-[450px] p-2 placeholder-black outline-none rounded-tr rounded-br"
-                    type="text" name="query" placeholder="Search" autocomplete="search_item();" onkeyup="search_item();"
-                    oninput="search_item()">
-                <datalist id="search_queries"></datalist>
-            </div>
+                    type="text" name="query" placeholder="Search" autocomplete="search_item();" onkeyup="search_item();" oninput="search_item()">
+                    <datalist id="search_queries"></datalist>
+                </div>
 
             <!-- search results -->
             <div id="results">
@@ -125,35 +124,31 @@
                 </div>
                 <style>
                     #loading-container {
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        background-color: rgba(255, 255, 255, 0.5);
-                        display: none;
-                        justify-content: center;
-                        align-items: center;
-                    }
-
-                    .loading-spinner {
-                        width: 50px;
-                        height: 50px;
-                        border: 5px solid #f3f3f3;
-                        border-top: 5px solid #3498db;
-                        border-radius: 50%;
-                        animation: spin 2s linear infinite;
-                    }
-
-                    @keyframes spin {
-                        0% {
-                            transform: rotate(0deg);
+                          position: fixed;
+                          top: 0;
+                          left: 0;
+                          right: 0;
+                          bottom: 0;
+                          background-color: rgba(255, 255, 255, 0.5);
+                          display: none;
+                          justify-content: center;
+                          align-items: center;
                         }
 
-                        100% {
-                            transform: rotate(360deg);
+                        .loading-spinner {
+                          width: 50px;
+                          height: 50px;
+                          border: 5px solid #f3f3f3;
+                          border-top: 5px solid #3498db;
+                          border-radius: 50%;
+                          animation: spin 2s linear infinite;
                         }
-                    }
+
+                        @keyframes spin {
+                          0% { transform: rotate(0deg); }
+                          100% { transform: rotate(360deg); }
+                        }
+
                 </style>
 
                 <!-- card -->
@@ -167,7 +162,7 @@
 
 
 
-    <script>loadSuggestion(); loadTabs();</script>
+    <script>loadSuggestion();loadTabs();</script>
 </body>
 
 </html>

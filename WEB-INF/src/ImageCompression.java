@@ -11,7 +11,7 @@ import java.io.File;
 
 public class ImageCompression
 {
-    boolean compressImg(int id)
+    public boolean compressImg(int id)
     {
         String sp = File.separator;
         String currentPath = System.getProperty("user.dir");

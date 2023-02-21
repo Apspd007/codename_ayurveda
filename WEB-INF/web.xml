@@ -54,5 +54,40 @@
 		<url-pattern>/FilesUpload</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>LoadModifyTable</servlet-name>
+		<servlet-class>com.ggv.ayurveda.LoadModifyTable</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoadModifyTable</servlet-name>
+		<url-pattern>/LoadModifyTable</url-pattern>
+	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>AddModifiedData</servlet-name>
+		<servlet-class>com.ggv.ayurveda.AddModifiedData</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddModifiedData</servlet-name>
+		<url-pattern>/AddModifiedData</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SearchModifiedData</servlet-name>
+		<servlet-class>com.ggv.ayurveda.SearchModifiedData</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchModifiedData</servlet-name>
+		<url-pattern>/SearchModifiedData</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DeleteModifiedData</servlet-name>
+		<servlet-class>com.ggv.ayurveda.DeleteModifiedData</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteModifiedData</servlet-name>
+		<url-pattern>/DeleteModifiedData</url-pattern>
+	</servlet-mapping>
+	
 </web-app>

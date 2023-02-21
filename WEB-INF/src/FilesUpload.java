@@ -50,16 +50,16 @@ public class FilesUpload extends HttpServlet
 
 
         //Getting image file extention
-        String extention = "";
-        String temp = img_part.getSubmittedFileName();
-        for(int i = 0 ;i < temp.toString().length(); i++)
-        {
-            String c_ = ""+ img_part.getSubmittedFileName().toString().charAt(i);
-            if( c_.equals(".") || extention.contains(".") )
-            {
-                extention += c_;
-            }
-        }
+        String extention = ".jpg";
+        // String temp = img_part.getSubmittedFileName();
+        // for(int i = 0 ;i < temp.toString().length(); i++)
+        // {
+        //     String c_ = ""+ img_part.getSubmittedFileName().toString().charAt(i);
+        //     if( c_.equals(".") || extention.contains(".") )
+        //     {
+        //         extention += c_;
+        //     }
+        // }
 
         System.out.print("extention is : "+extention);
 
