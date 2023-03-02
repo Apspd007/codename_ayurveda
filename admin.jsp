@@ -15,7 +15,8 @@
     <title>Ayurveda</title>
 </head>
 
-<body onload="init()">
+<!-- <body onload="init()"> -->
+<body>
     <!-- mobile and tablet header -->
     <section class="lg:hidden flex flex-col w-full bg-white border-b gap-y-4">
         <header class=" w-full px-10 flex justify-between items-center md:flex-row flex-col gap-y-4">
@@ -120,20 +121,20 @@
         <div class="px-6 py-12 h-full">
             <div class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
                 <div class="md:w-8/12 lg:w-5/12 lg:ml-20">
-                    <form>
+                    <!-- <form id="LoginForm" method="get"> -->
                         <h2 class="IBM-Plex text-center text-2xl leading-[5rem]">Admin Login</h2>
                         <!-- Email input -->
                         <div class="mb-6">
                             <input type="text"
                                 class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                                placeholder="Username" />
+                                placeholder="Username" id="username"/>
                         </div>
 
                         <!-- Password input -->
                         <div class="mb-6">
                             <input type="password"
                                 class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                                placeholder="Password" />
+                                placeholder="Password" id="password"/>
                         </div>
 
                         <div class="flex justify-between items-center mb-6">
@@ -145,11 +146,11 @@
                         <!-- Submit button -->
                         <button type="submit"
                             class="inline-block px-7 py-3 bg-blue-600 text-white font-medium leading-snug rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full"
-                            data-mdb-ripple="true" data-mdb-ripple-color="light">
+                            data-mdb-ripple="true" data-mdb-ripple-color="light" onclick="aoth_system()">
                             Sign In
                         </button>
 
-                    </form>
+                    <!-- </form> -->
                 </div>
             </div>
         </div>
@@ -171,7 +172,8 @@
         <hr width="100%" style="height:1px;border-width:0;color:gray;background-color:gray;">
         <p class="text-center text-lg">Copyright &#169; 2022-2023</p>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="scripts/aoth_system.js"></script>
+    <!-- <script src="js/script.js"></script> -->
 </body>
 
 </html>
