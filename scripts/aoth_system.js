@@ -1,7 +1,5 @@
-console.log("Hii")
 function aoth_system()
 {
-    console.log("Hh")
     let username = document.getElementById("username");
     let password = document.getElementById("password");
     
@@ -11,17 +9,13 @@ function aoth_system()
     let username_ = username.value;
     let password_ = password.value;
 
-    console.log(username_)
-    console.log(password_)
 
     if(username_.trim() == '' || username_.trim() == "" || password_.trim() == '' || password_.trim() == "")
     {
         alert('Id or Password can\'t be blank')
         return;
     }
-    console.log(username_);
-    console.log(password_);
-    // console.log(`./SearchPlants?search=${query}`);
+
     //Prepare request
     xhr.open('GET', `loginValidation.jsp?username=${username_}&password=${password_}`, true);
     
@@ -29,6 +23,7 @@ function aoth_system()
     xhr.send();
 
     //process request
+    document.getElementById("submit").disable = "true";
 
     xhr.onload = () => {
         if(xhr.status == 200 && xhr.readyState == 4)
@@ -44,10 +39,38 @@ function aoth_system()
             {
                 alert(xhr.response);
             }
+            document.getElementById("submit").disable = "false";
         }
         else
         {
-            //display loading css
+            //display loading css            
+            document.getElementById("submit").disable = "false";
+        }
+    }
+}
+
+
+function clearSession()
+{
+    //Create an Ajax request
+    let xhr = new XMLHttpRequest();
+
+    //Prepare request
+    xhr.open('GET', `clearSession.jsp`, true);
+    
+    //send request
+    xhr.send();
+
+    //process request
+
+    xhr.onload = () => {
+        if(xhr.status == 200 && xhr.readyState == 4)
+        {
+            window.location.href = "admin.jsp";
+        }
+        else
+        {
+            //display loading css            
         }
     }
 }

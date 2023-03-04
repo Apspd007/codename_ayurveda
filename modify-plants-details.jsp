@@ -1,3 +1,24 @@
+<!-- Auth System -->
+<%
+
+    //Checking Session
+
+    if(session.getAttribute("username") == null ) 
+    {
+        response.sendRedirect("admin.jsp");
+    }
+    
+    HttpSession session_ = request.getSession(false);
+    if (session_ == null || session_.equals("null")) {
+        session_ = request.getSession();
+        if( session_ == null || session_.equals("null"))
+        {
+            response.sendRedirect("admin.jsp");
+        }
+    }
+
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
