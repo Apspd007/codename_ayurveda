@@ -13,6 +13,9 @@ import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.ResultSet;
 
+import java.io.FileReader;
+import java.io.BufferedReader;
+
 import com.ggv.ayurveda.DBConnection;
 
 public class CheckLogin extends HttpServlet
@@ -31,6 +34,11 @@ public class CheckLogin extends HttpServlet
 
             String username = request.getParameter("username");
             String password = request.getParameter("password");
+
+            //Getting Username and password from text files
+            //FileReader fr = new FileReader(".\\");
+            System.out.println("User directory is : "+System.getProperty("user.dir"));
+
 
             // You can add your own logic to check the username and password against a database or file
             // For now, we will just check if the username is "admin" and the password is "password"

@@ -1,4 +1,5 @@
 <%@page import="java.sql.*"%>
+<%@page import="java.io.*"%>
 
 <%
 String username = request.getParameter("username");
@@ -10,6 +11,7 @@ String dbPassword = "root";*/
 
 try{
 
+	/* No Database Connectivity.............. */
 	/*Class.forName("com.mysql.jdbc.Driver");
 	Connection conn = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
 	Statement st = conn.createStatement();
@@ -19,16 +21,42 @@ try{
 		out.print("success");
     }*/
 
-    if( username.equals("admin") && password.equals("password") )
-    {
-        
-        //Saving Id and Password
-        session.setAttribute("username", username);
+	System.out.println("User directory is : "+System.getProperty("user.dir"));
+	String sp = System.getProperty("file.separator");
+	String Path = System.getProperty("user.dir")+sp+"webapps"+sp+"codename-ayurveda"+sp+"inf"+sp+"users.txt";
 
-        out.println("success");
-        //response.sendRedirect("admin-menu.jsp");
-    }
-	else{
+	//Reading users in files
+	FileReader fr = new FileReader(Path);
+	BufferedReader br = new BufferedReader(fr);
+
+	String line;
+	boolean loginFailed = true;
+	while( ( line = br.readLine() ) != null )
+	{
+		
+		String[] auth = line.split(",");
+
+		//if(auth.length() < 2) continue; //auth[0] -> username, auth[1] -> password
+
+		if( username.equals( auth[0].trim() ) && password.equals( auth[1].trim() ) )
+		{
+			
+			//Saving Id and Password
+			session.setAttribute("username", username);
+	
+			out.println("success");
+			//response.sendRedirect("admin-menu.jsp");
+			
+			loginFailed = false;
+
+			break;
+		}
+
+	}
+
+
+	if(loginFailed)
+	{
 		out.print("Invalid username or password!");
 	}
 
@@ -36,6 +64,7 @@ try{
 }
 catch(Exception e){
 	out.print("Error occurred while processing login request!");
+	System.out.println(e);
 }
 
 %>

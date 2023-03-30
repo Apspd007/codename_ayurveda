@@ -32,7 +32,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/ggu-logo.png" type="image/x-icon">
-    <title>Upload File</title>
+    <title>Add Plant Details</title>
 </head>
 <body>
  <section class="lg:hidden flex flex-col w-full bg-white border-b gap-y-4">
@@ -77,7 +77,7 @@
   <!-- Logo and navigation -->
         <div class="flex justify-between items-end">
             <span class="xl:ml-[12%]">
-                <img class="filter invert" src="../images/ayurveda-logo.png" alt="Ayurveda Logo" width="250"
+                <img class="filter invert" src="images/ayurveda-logo.png" alt="Ayurveda Logo" width="250"
                     height="60">
             </span>
             <nav class=" flex w-min items-center self-end justify-end gap-x-7 py-1 pl-14 px-10">

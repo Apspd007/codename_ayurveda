@@ -102,9 +102,9 @@
     <!-- search box -->
     <div class="max-w-[75%] min-w-max flex gap-x-10 mt-14 ml-14">
         <!-- recent searches section -->
-        <div class="hidden lg:flex gap-x-8">
-            <h2 class="text-xl mt-4">Recent Search</h2>
-            <div id="recentsearch" class="h-[550px] w-[1px] bg-gray-600"></div>
+        <div id="recentsearch" class="hidden lg:flex gap-x-8">
+            <h2  class="text-xl mt-4">Recent Search</h2><br>
+            <div class="h-[550px] w-[1px] bg-gray-600"></div>
         </div>
         <!-- recent searches section end -->
         <!-- search section -->
@@ -113,55 +113,41 @@
             <div class="bg-zinc-300 max-w-xl rounded flex"><img class="mx-4" src="images/search.svg" height="24"
                     width="24" alt="search icon" srcset=""><input id="search_query" list="search_queries"
                     class="bg-zinc-300 text-black w-[450px] p-2 placeholder-black outline-none rounded-tr rounded-br"
-                    type="text" name="query" placeholder="Search" autocomplete="search_item();" onkeyup="search_item();" oninput="search_item()">
+                    type="text" name="query" placeholder="Search" autocomplete="search_item();" onkeyup="search_item();" onkeydown="addSearchHistory(event)" oninput="search_item();addSearchHistory(event);">
                     <datalist id="search_queries"></datalist>
                 </div>
 
             <!-- search results -->
             <div id="results">
-                <div id="loading-container">
-                    <div class="loading-spinner"></div>
-                </div>
-                <style>
-                    #loading-container {
-                          position: fixed;
-                          top: 0;
-                          left: 0;
-                          right: 0;
-                          bottom: 0;
-                          background-color: rgba(255, 255, 255, 0.5);
-                          display: none;
-                          justify-content: center;
-                          align-items: center;
-                        }
-
-                        .loading-spinner {
-                          width: 50px;
-                          height: 50px;
-                          border: 5px solid #f3f3f3;
-                          border-top: 5px solid #3498db;
-                          border-radius: 50%;
-                          animation: spin 2s linear infinite;
-                        }
-
-                        @keyframes spin {
-                          0% { transform: rotate(0deg); }
-                          100% { transform: rotate(360deg); }
-                        }
-
-                </style>
 
                 <!-- card -->
                 <!-- card end -->
             </div>
+            
             <!-- search results end-->
+            <p style="text-align: end;"><button id="loadbutton" type="button" style="background:none;color:blue;  border:none; padding:0; margin:0; cursor:pointer; text-decoration: none;" onmouseover  = "this.style.textDecoration = 'underline'" onmouseout  = "this.style.textDecoration = 'none'" onclick="loadMoreData()">Load More Data...</button></p>
         </div>
         <!-- search section end -->
+        
     </div>
     <!-- search box end -->
+    
+    <!-- footer -->
+    <footer class="h-[30vh] bg-gray-200 py-4 flex flex-col justify-end items-center ">
 
-
-
+        <div class="w-full mb-auto grid grid-cols-2 justify-between">
+            <div><img class="invert" src="images/ayurveda-logo.png" alt="Ayurveda logo"></div>
+            <ul class="justify-self-end mx-5 md:mx-10 lg:mx-40">
+                <li>More Links</li>
+                <li><a href="https://www.ggu.ac.in/" class="underline text-blue-500" target="_blank"
+                        rel="noopener noreferrer">GGU</a></li>
+                <li><a href="https://aiia.gov.in/" class="underline text-blue-500" target="_blank"
+                        rel="noopener noreferrer">AIIA</a></li>
+            </ul>
+        </div>
+        <hr width="100%" style="height:1px;border-width:0;background-color:gray;">
+        <p class="flex flex-col justify-center items-center text-lg">Copyright &#169; 2022-2023</p>
+    </footer>
     <script>loadSuggestion();loadTabs();</script>
 </body>
 

@@ -35,16 +35,33 @@ public class SearchPlants extends HttpServlet
 
             //Getting Query Parameter
             String search = req.getParameter("search");
-            if(search.equals("") || search == null || search == "" || search.trim().equals("") || search.trim() == "")
+            String offset = req.getParameter("offset");
+
+
+            //If Searched Data is null then showing default data
+            /*if(search.equals("") || search == null || search == "" || search.trim().equals("") || search.trim() == "")
             {
 
                 com.ggv.ayurveda.OnPageLoad defaultData = new com.ggv.ayurveda.OnPageLoad();
                 defaultData.doGet(req, res);
                 return;
-            }
+            }*/
+
+
+            //checking offset is null or not
+            offset = offset != null ? offset : "0";
+            System.out.println("offset is"+offset);
             
+            //Setting Offset Limit
+            int offsetStarting  = Integer.parseInt(offset.trim()); //adding next row
+            int offsetEnding = offsetStarting + 10; //Adding next 10 row  ////////////////////change here
+            System.out.println("offsetStarting : "+offsetStarting+" , offsetEnding : "+offsetEnding);
+
             //Searching Query Parameter
-            String query = "select * from ayurveda_db where upper(com_name) like upper('%"+search+"%') OR upper(sci_name) like upper('%"+search+"%') OR upper(family) like upper('%"+search+"%') ";
+            
+            // String query = "select * from ayurveda_db where upper(com_name) like upper('%"+search+"%') OR upper(sci_name) like upper('%"+search+"%') OR upper(family) like upper('%"+search+"%') ";
+            String query = "SELECT * FROM ( SELECT ayurveda_db.*, row_number() over (partition by 1 order by 1) as rnum from ayurveda_db where upper(com_name) like upper('%"+search+"%') OR upper(sci_name) like upper('%"+search+"%') OR upper(family) like upper('%"+search+"%') ) where rnum <= "+ offsetEnding +" and rnum > "+ offsetStarting;
+            // out.println(query);
             System.out.println(query);
             PreparedStatement pstmt = conn.prepareStatement(query);
             ResultSet rs = pstmt.executeQuery();
@@ -53,7 +70,8 @@ public class SearchPlants extends HttpServlet
 
             if(!avaibleData)
             {
-                out.println("Sorry !! Data Available Soon...");
+                out.println("No More Row Selected...<br>");
+                return;
             }        
             //Creating Card Template
             StringBuilder cardTemplate = new StringBuilder();
@@ -70,12 +88,21 @@ public class SearchPlants extends HttpServlet
                 avaibleData = rs.next();
             }
 
+            //Adding Load More Data button
+            cardTemplate.append("<input type='hidden' name='rownum' id='rownum' value='"+offsetEnding+"'/>");
+
             //Sending card template data
             out.println(cardTemplate);
         }
         catch(Exception e)
         {
             System.out.println("Error : "+e);
+
+            if(e.toString().contains("ORA-01000"))
+            {
+                out.println("<h2>Server Busy : To Many Request to Handle Try After Some Time</h2>");
+            }
+            // out.println(""+e);
             out.println("No result found");
 
             //Showing Default Data 

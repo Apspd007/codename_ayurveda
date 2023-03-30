@@ -30,7 +30,7 @@ public class ModifyTableUtil
             template.append("</td>");
 
             template.append("<td>");
-                template.append("<a href='Viewer?id="+id+"' target='_blank'>pdf logo</a>");
+                template.append("<a href='Viewer?id="+id+"' target='_blank'>Open Pdf</a>");
             template.append("</td>");
 
 
@@ -41,8 +41,8 @@ public class ModifyTableUtil
             String parameters = "loadData( "+id+" , '"+comman_name+"' , '"+sci_name+"' , '"+family+"' , '"+imagePath+"' , '"+pdfPath+"' )";
 
             template.append("<td>");
-                template.append("<button onclick=\""+parameters+"\">");
-                    template.append("open file logo");
+                template.append("<button class='text-center text-lg inline-block mb-5 px-7 py-3 bg-orange-600 text-white font-medium leading-snug rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out' data-mdb-ripple='true' data-mdb-ripple-color='light' onclick=\""+parameters+"\">");
+                    template.append("Show Data");
                 template.append("</button>");
             template.append("</td>");
 

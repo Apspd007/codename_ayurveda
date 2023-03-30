@@ -89,5 +89,44 @@
 		<servlet-name>DeleteModifiedData</servlet-name>
 		<url-pattern>/DeleteModifiedData</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>admin</servlet-name>
+		<jsp-file>/admin.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>admin</servlet-name>
+		<url-pattern>/Admin</url-pattern>
+		<url-pattern>/admin</url-pattern>
+		<url-pattern>/AdminLogin</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>admin-menu</servlet-name>
+		<jsp-file>/admin-menu.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>admin-menu</servlet-name>
+		<url-pattern>/AdminMenu</url-pattern>
+		<url-pattern>/admin-menu</url-pattern>
+		<url-pattern>/Admin-Menu</url-pattern>
+	</servlet-mapping>
+
+	
+	<servlet>
+		<servlet-name>plants-list</servlet-name>
+		<jsp-file>/plants-list.html</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>plants-list</servlet-name>
+		<url-pattern>/plants-list</url-pattern>
+		<url-pattern>/Plants-List</url-pattern>
+		<url-pattern>/Plants-list</url-pattern>
+		<url-pattern>/plants-List</url-pattern>
+		<url-pattern>/plant-list</url-pattern>
+		<url-pattern>/Plant-List</url-pattern>
+		<url-pattern>/Plant-list</url-pattern>
+		<url-pattern>/plant-List</url-pattern>
+	</servlet-mapping>
 		
 </web-app>
