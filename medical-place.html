@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Lora&family=Montserrat&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/ggu-logo.png" type="image/x-icon">
+    <title>Ayurveda</title>
+</head>
+
+<!-- <body onload="init()"> -->
+<body>
+    <!-- mobile and tablet header -->
+    <section class="lg:hidden flex flex-col w-full bg-white border-b gap-y-4">
+        <header class=" w-full px-10 flex justify-between items-center md:flex-row flex-col gap-y-4">
+            <div onclick="blankRedirect('https://www.ggu.ac.in/')" class="cursor-pointer"><img
+                    class="max-h-[70px] object-cover" src="images/ggu-image.png"></div>
+            <div onclick="blankRedirect('https://aiia.gov.in/')" class="cursor-pointer"><img
+                    class="max-h-[60px] object-cover" src="images/aiia-image.png"></div>
+        </header>
+
+        <!-- Logo and navigation -->
+        <div class="flex justify-end bg-white items-end">
+            <nav class=" flex w-min items-center self-end justify-end gap-x-7 py-1 pl-14 px-10">
+                <div
+                    class="nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    Home</div>
+                <div
+                    class="nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    About</div>
+                <div
+                    class="nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    Academic</div>
+                <div>
+                    <button id="menu-administration"
+                        class="peer nav-font-size cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                        Administration
+                    </button>
+                    <!-- the menu here -->
+                    <div id="menu-item-administration" class="hidden peer-hover:grid hover:grid grid-flow-row
+                     bg-white drop-shadow-lg absolute z-10">
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/visitor.html">Visitor</a>
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/chancellor.html">Chancellor</a>
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/vice-chancellor.html">Vice
+                            Chancellor</a>
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/registrar.html">Registrar</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </section>
+
+    <!-- header -->
+    <section class="hidden header-section h-[160px] lg:flex flex-col justify-between">
+
+        <header class="w-full h-[90px] px-10 flex justify-between items-center ">
+            <div onclick="blankRedirect('https://www.ggu.ac.in/')" class="cursor-pointer"><img
+                    class="2xl:h-[90px] max-h-[90px] object-cover" src="images/ggu-image.png"></div>
+            <img class="h-28 object-cover cursor-pointer" onclick="redirectHome()" src="images/gg.png">
+            <div onclick="blankRedirect('https://aiia.gov.in/')" class="cursor-pointer">
+                <img class="2xl:h-[90px] max-h-[90px] object-cover" src="images/aiia-image.png">
+            </div>
+        </header>
+
+        <!-- Logo and navigation -->
+        <div class="flex justify-between items-end">
+            <span class="xl:ml-[12%]">
+                <img class="filter invert" src="images/ayurveda-logo.png" alt="Ayurveda Logo" width="250" height="60">
+            </span>
+            <nav class=" flex w-min items-center self-end justify-end gap-x-7 py-1 pl-14 px-10">
+                <div onclick="redirectHome()"
+                    class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    Home</div>
+                <div>
+                    <button id="menu-about"
+                        class="peer nav-font-size cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                        About
+                    </button>
+                    <!-- the menu here -->
+                    <div id="menu-item-about" class="hidden peer-hover:grid hover:grid grid-flow-row
+                 bg-white drop-shadow-lg absolute z-10">
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/about-ggu.html">About GGU</a>
+                        <a class="px-5 py-3 hover:bg-gray-200" href="https://aiia.gov.in/about/">About AIIA</a>
+                    </div>
+                </div>
+                <div
+                    class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    Academic</div>
+                <div>
+                    <button id="menu-administration"
+                        class="peer nav-font-size cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                        Administration
+                    </button>
+                    <!-- the menu here -->
+                    <div id="menu-item-administration" class="hidden peer-hover:grid hover:grid grid-flow-row
+             bg-white drop-shadow-lg absolute z-10">
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/visitor.html">Visitor</a>
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/chancellor.html">Chancellor</a>
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/vice-chancellor.html">Vice
+                            Chancellor</a>
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/registrar.html">Registrar</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+    </section>
+    <!-- header end -->
+
+    <!-- Your Content Here -->
+
+    <div class="container margin-top-1" >
+        <div class="row ">
+            <div class="col-12 margin-left-1">
+                <h1 class="card-header" style="font-size: 55px; font-family: 'Lora', serif; text-align: center;">Places to find</h1>
+            </div>
+            <div class="row margin-top-1" >
+                <div class="col-12">
+                    <div class="card" style="background-color: #FFD93D;">
+                        <div class="card-image col-3">
+                            <img src="images/about-ayurveda/achanakmaar.jpeg" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="card-content col-9">
+                            Chhattisgarh is anyway blessed with a variety of medicinal and aromatic plants, <strong>Achanakmaar</strong> is one of them. Most of these herbs have been used for generations in Ayurveda, Unani and herbal medicines. Herbs like Brahmamar to deal with cancer, Satavar, Safed Musli, Kali Musli, Ashwagandha Tanik, Kukrada and Adusa for respiratory problems, Gudmar to deal with diabetes (blood sugar), Sadasuhagan, Brahmi and Vaach to increase memory are found in the forests of the state. are available in Tribals use many types of herbs to keep themselves healthy, in which coarse grains like mustard seeds are called ragi. It works as both food and medicine for people suffering from diabetes.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="space">
+    </div>    
+
+    <!-- divider -->
+    <div class="flex justify-center md:mt-10">
+        <svg width="180" height="2" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="1" x2="180" y2="1" stroke="black" stroke-width="2" stroke-dasharray="4 8 12 16" />
+        </svg>
+    </div>
+
+    <div class="space">
+    </div>    
+
+    <div class="container" >
+        <div class="row ">
+            <div class="col-12 margin-left-1">
+                <h1 class="card-header" style="font-size: 55px; font-family: 'Lora', serif; text-align: center;">Achanakmaar</h1>
+            </div>
+            <div class="row margin-top-1" >
+                <div class="col-12">
+                    <div class="card" style="background-color: #FFD93D;">
+                        <div class="card-image col-3"><iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14747.706521227261!2d81.7709508482186!3d22.46939127304246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a282006a5e88aa5%3A0xce9b7721e5d5a02b!2sAchanakma%2C%20Chhattisgarh%20495116!5e0!3m2!1sen!2sin!4v1681544856972!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="card-content col-9">
+                            Achanakmar Wildlife Sanctuary is a sanctuary in Mungeli district of Chhattisgarh and in the Anuppur and Dindori districts of Madhya Pradesh in India. It was established in 1975, under the provisions of the Indian Wildlife Protection Act of 1972, and declared as a Tiger Reserve under Project Tiger, in 2009.
+                            Its geographical coordinates are approximately 22.2258° N latitude and 81.4952° E longitude.Achanakmar Tiger Reserve in Chhattisgarh covers an area of 914 Km2 with 626.2 Km2 of core zone and 287.8 Km2 area are buffer zone. 
+                            Achanakmar can be reached from Pendra Road and Bilaspur railway stations. The sanctuary is close to Amarkantak, the source of the Son River and Narmada River.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="space">
+    </div>    
+
+
+
+    <!-- Your Content Here -->
+
+
+    
+    <!-- footer -->
+    <footer class="h-[30vh] bg-gray-200 py-4 flex flex-col justify-end items-center">
+        <div class="w-full mb-auto grid grid-cols-2 justify-between">
+            <div><img class="invert" src="images/ayurveda-logo.png" alt="Ayurveda logo"></div>
+            <ul class="justify-self-end mx-5 md:mx-10 lg:mx-40">
+                <li>More Links</li>
+                <li><a href="https://www.ggu.ac.in/" class="underline text-blue-500" target="_blank"
+                        rel="noopener noreferrer">GGU</a></li>
+                <li><a href="https://aiia.gov.in/" class="underline text-blue-500" target="_blank"
+                        rel="noopener noreferrer">AIIA</a></li>
+            </ul>
+        </div>
+        <hr width="100%" style="height:1px;border-width:0;color:gray;background-color:gray;">
+        <p class="text-center text-lg">Copyright &#169; 2022-2023</p>
+    </footer>
+    <script src="scripts/aoth_system.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+</body>
+
+
+    <style>
+        .container
+        {
+            width: inherit;
+            width: 80%;
+            margin: auto;
+            /* background-color: cyan; */
+            height: auto;
+        }
+        .margin-top-1{
+            margin-top: 1.8em;
+        }
+        .row{
+            width: 100%;
+            height: auto;
+        }
+        .col-12{
+            width: 100%;
+        }
+        .margin-left-1{
+            margin-left: 1rem;
+        }
+        .col-3{
+            width: inherit;
+            width: 25%;
+        }
+        .col-9{
+            width: 75%;
+        }
+        .card{
+            display: inline-flex;
+            height: auto;
+            border: 3px solid  black; border-radius: 10px;
+        }
+        .card-content{
+            margin-left: 10px;
+            font-size: 20px;
+        }
+        .space{
+            height: 2.5em;
+        }
+        .map{
+            width: 100%;
+            height: 100%;
+        }
+
+        /* For extremely small screen devices (595px and below) */
+        @media only screen and (max-width: 300px) {
+            .col-3{
+                display: none;
+                width: 0%;
+            }
+            .col-9{
+                width: 100%;
+            }
+            
+            .card-header{
+                font-size: 25px !important;
+                text-align: left !important;
+                
+            }
+            .margin-top-1{
+                margin-top: 1em !important;
+            }
+            .card-content{
+            font-size: 20px !important;
+            }
+        }
+
+        /* Small screen devices (600px and above) */
+        @media (min-width: 300px) and (max-width: 600px) {
+            .col-3{
+                display: none;
+                width: 0%;
+            }
+            .col-9{
+                width: 100%;
+            }
+            
+            .card-header{
+                font-size: 30px !important;
+                text-align: left !important;
+            }
+            
+            .margin-top-1{
+                margin-top: 1em !important;
+            }
+            .card-content{
+            font-size: 20px !important;
+            }
+        }
+
+        /* Medium screen devices (768px and above) */
+        @media (min-width: 601px) and (max-width: 769px) {
+            .col-3{
+                display: none;
+                width: 0%;
+            }
+            .col-9{
+                width: 100%;
+            }
+            .card-header{
+                font-size: 40px !important;
+                text-align: left !important;
+                /* background-color: yellow; */
+            }
+            .margin-top-1{
+                margin-top: 1em !important;
+            }
+            .card-content{
+            font-size: 20px !important;
+            }
+        }
+
+        /* Big screen devices (889px and above) */
+        @media (min-width: 770px) and (max-width: 889px) {
+            .col-3{
+                width: 25%;
+            }
+            .col-9{
+                width: 75%;
+            }
+            .card-header{
+                font-size: 55px !important;
+            }
+            .card-content{
+            margin-left: 10px;
+            font-size: 18px !important;
+            }
+        }
+
+        /* Extra big screen devices (1200px and above) */
+        @media only screen and (min-width: 890px){
+            .col-3{
+                width: 40%;
+            }
+            .col-9{
+                width: 60%;
+            }
+            .card-header{
+                font-size: 55px !important;
+            }
+        }
+    </style>
+
+</html>

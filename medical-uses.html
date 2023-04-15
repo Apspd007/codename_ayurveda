@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Lora&family=Montserrat&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/ggu-logo.png" type="image/x-icon">
+    <title>Ayurveda</title>
+</head>
+
+<!-- <body onload="init()"> -->
+<body>
+    <!-- mobile and tablet header -->
+    <section class="lg:hidden flex flex-col w-full bg-white border-b gap-y-4">
+        <header class=" w-full px-10 flex justify-between items-center md:flex-row flex-col gap-y-4">
+            <div onclick="blankRedirect('https://www.ggu.ac.in/')" class="cursor-pointer"><img
+                    class="max-h-[70px] object-cover" src="images/ggu-image.png"></div>
+            <div onclick="blankRedirect('https://aiia.gov.in/')" class="cursor-pointer"><img
+                    class="max-h-[60px] object-cover" src="images/aiia-image.png"></div>
+        </header>
+
+        <!-- Logo and navigation -->
+        <div class="flex justify-end bg-white items-end">
+            <nav class=" flex w-min items-center self-end justify-end gap-x-7 py-1 pl-14 px-10">
+                <div
+                    class="nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    Home</div>
+                <div
+                    class="nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    About</div>
+                <div
+                    class="nav-font-size cursor-pointer px-2 py-1 font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    Academic</div>
+                <div>
+                    <button id="menu-administration"
+                        class="peer nav-font-size cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                        Administration
+                    </button>
+                    <!-- the menu here -->
+                    <div id="menu-item-administration" class="hidden peer-hover:grid hover:grid grid-flow-row
+                     bg-white drop-shadow-lg absolute z-10">
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/visitor.html">Visitor</a>
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/chancellor.html">Chancellor</a>
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/vice-chancellor.html">Vice
+                            Chancellor</a>
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/registrar.html">Registrar</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </section>
+
+    <!-- header -->
+    <section class="hidden header-section h-[160px] lg:flex flex-col justify-between">
+
+        <header class="w-full h-[90px] px-10 flex justify-between items-center ">
+            <div onclick="blankRedirect('https://www.ggu.ac.in/')" class="cursor-pointer"><img
+                    class="2xl:h-[90px] max-h-[90px] object-cover" src="images/ggu-image.png"></div>
+            <img class="h-28 object-cover cursor-pointer" onclick="redirectHome()" src="images/gg.png">
+            <div onclick="blankRedirect('https://aiia.gov.in/')" class="cursor-pointer">
+                <img class="2xl:h-[90px] max-h-[90px] object-cover" src="images/aiia-image.png">
+            </div>
+        </header>
+
+        <!-- Logo and navigation -->
+        <div class="flex justify-between items-end">
+            <span class="xl:ml-[12%]">
+                <img class="filter invert" src="images/ayurveda-logo.png" alt="Ayurveda Logo" width="250" height="60">
+            </span>
+            <nav class=" flex w-min items-center self-end justify-end gap-x-7 py-1 pl-14 px-10">
+                <div onclick="redirectHome()"
+                    class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    Home</div>
+                <div>
+                    <button id="menu-about"
+                        class="peer nav-font-size cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                        About
+                    </button>
+                    <!-- the menu here -->
+                    <div id="menu-item-about" class="hidden peer-hover:grid hover:grid grid-flow-row
+                 bg-white drop-shadow-lg absolute z-10">
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/about-ggu.html">About GGU</a>
+                        <a class="px-5 py-3 hover:bg-gray-200" href="https://aiia.gov.in/about/">About AIIA</a>
+                    </div>
+                </div>
+                <div
+                    class="cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                    Academic</div>
+                <div>
+                    <button id="menu-administration"
+                        class="peer nav-font-size cursor-pointer px-2 py-1 text-xl font-medium tracking-wide hover:bg-gray-300 rounded ease-in duration-200">
+                        Administration
+                    </button>
+                    <!-- the menu here -->
+                    <div id="menu-item-administration" class="hidden peer-hover:grid hover:grid grid-flow-row
+             bg-white drop-shadow-lg absolute z-10">
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/visitor.html">Visitor</a>
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/chancellor.html">Chancellor</a>
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/vice-chancellor.html">Vice
+                            Chancellor</a>
+                        <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/registrar.html">Registrar</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+    </section>
+    <!-- header end -->
+
+    <!-- Your Content Here -->
+
+
+    <div class="container margin-top-1">
+        <div class="row" style="justify-content: center;">
+            <h1 class="card-header" style="font-family: 'Lora', serif; text-align: center;">Medical Uses</h1>
+        </div>
+        <hr><br>
+
+        <div class="row" id="Ashwagandha">
+            <div class="col-3">
+                <img src="images/medical uses/Ashwagandha_Root.jpg" alt="" loading="lazy">
+            </div>
+            <div class="col-9">
+                <h3>Ashwagandha</h3>
+                <p>It is also known as Withania somnifera. It used for stress relief, improving immunity, and promoting overall wellness</p>
+            </div>
+        </div>
+        <br><hr><br>
+
+        <div class="row" id="Turmeric">
+            <div class="col-3">
+                <img src="images/medical uses/Curcuma_longa_roots.jpg" alt="" loading="lazy">
+            </div>
+            <div class="col-9">
+                <h3>Turmeric</h3>
+                <p>It is also known as Curcuma longa. It used for anti-inflammatory and antioxidant, used for treating digestive and skin disorders</p>
+            </div>
+        </div>
+        <br><hr><br>
+
+        <div class="row" id="Brahmi">
+            <div class="col-3">
+                <img src="images/medical uses/Brahmi.jpg" alt="" loading="lazy">
+            </div>
+            <div class="col-9">
+                <h3>Brahmi</h3>
+                <p>It is also known as Bacopa monnieri. It used for improving memory and cognitive function</p>
+            </div>
+        </div>
+        <br><hr><br>
+
+        <div class="row" id="AloeVera">
+            <div class="col-3">
+                <img src="images/medical uses/Aloevera_plant.jpg" alt="" loading="lazy">
+            </div>
+            <div class="col-9">
+                <h3>Aloe vera</h3>
+                <p>It is also known as Aloe barbadensis. It used for  skin care, digestive issues, and promoting overall health</p>
+            </div>
+        </div>
+        <br><hr><br>
+
+        <div class="row" id="Neem">
+            <div class="col-3">
+                <img src="images/medical uses/Neem.jpg" alt="" loading="lazy">
+            </div>
+            <div class="col-9">
+                <h3>Neem</h3>
+                <p>It is also known as Azadirachta indica. It used for anti-bacterial and anti-inflammatory, used for treating skin conditions and promoting oral health</p>
+            </div>
+        </div>
+        <br><hr><br>
+
+        <div class="row" id="Tulsi">
+            <div class="col-3">
+                <img src="images/medical uses/Tulsi_or_Tulasi_Holy_basil.jpg" alt="" loading="lazy">
+            </div>
+            <div class="col-9">
+                <h3>Tulsi</h3>
+                <p>It is also known as Holy basil or Ocimum sanctum. It used for treating respiratory and digestive problems, as well as stress relief</p>
+            </div>
+        </div>
+        <br><hr><br>
+
+        <div class="row" id="Licorice">
+            <div class="col-3">
+                <img src="images/medical uses/Glycyrrhiza_glabra_Y02.jpg" alt="" loading="lazy">
+            </div>
+            <div class="col-9">
+                <h3>Licorice</h3>
+                <p>It is also known as Glycyrrhiza glabra. It used for treating respiratory and digestive issues, as well as reducing inflammation</p>
+            </div>
+        </div>
+        <br><hr><br>
+
+        <div class="row" id="Haritaki">
+            <div class="col-3">
+                <img src="images/medical uses/Terminalia_Chebula_Leaves.jpeg" alt="" loading="lazy">
+            </div>
+            <div class="col-9">
+                <h3>Haritaki</h3>
+                <p>It is also known as Terminalia chebula. It used for improving digestion, promoting weight loss, and reducing inflammation</p>
+            </div>
+        </div>
+        <br><hr><br>
+
+
+        <div class="row" style="justify-content: center;">
+            <h1 id="last-card" class="card-header" style="color: #FFD93D; text-align: center; text-stroke: 1px black; -webkit-text-stroke: 1px black;">More Data will be Added Soon...</h1>
+        </div>
+
+    </div>
+    <div class="space">
+    </div>    
+    <br>
+<br>
+    <!-- Your Content Here -->
+
+
+    
+    <!-- footer -->
+    <footer class="h-[30vh] bg-gray-200 py-4 flex flex-col justify-end items-center">
+        <div class="w-full mb-auto grid grid-cols-2 justify-between">
+            <div><img class="invert" src="images/ayurveda-logo.png" alt="Ayurveda logo"></div>
+            <ul class="justify-self-end mx-5 md:mx-10 lg:mx-40">
+                <li>More Links</li>
+                <li><a href="https://www.ggu.ac.in/" class="underline text-blue-500" target="_blank"
+                        rel="noopener noreferrer">GGU</a></li>
+                <li><a href="https://aiia.gov.in/" class="underline text-blue-500" target="_blank"
+                        rel="noopener noreferrer">AIIA</a></li>
+            </ul>
+        </div>
+        <hr width="100%" style="height:1px;border-width:0;color:gray;background-color:gray;">
+        <p class="text-center text-lg">Copyright &#169; 2022-2023</p>
+    </footer>
+    <script src="scripts/aoth_system.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+</body>
+
+
+    <style>
+        .container
+        {
+            width: inherit;
+            width: 80%;
+            margin: auto;
+            /* background-color: cyan; */
+            height: auto;
+        }
+        .margin-top-1{
+            margin-top: 1.8em;
+        }
+        .row{
+            /* width: 100%;
+            height: auto; */
+            display: flex;
+        }
+        .space{
+            height: 2.5em;
+        }
+        .col-3{
+            /* width:10%; */
+            /* display: inline-block !important; */
+            /* float: left; */
+        }
+        .col-9{
+            /* width: 90%; */
+            /* display: inline-block !important; */
+            /* float: right; */
+            margin-left: 20px;
+        }
+        .col-3 img{
+            width: 85px;
+            height: 85px;
+            border: 5px hidden black;
+            border-radius: 50%;
+        }
+        .col-9 > h3{
+            font-size: 24px;
+            text-decoration: underline;
+            font-family: 'Lora', serif;
+        }
+        .col-9 p{
+            font-size: 18px;
+        }
+        .outline {
+			-webkit-text-stroke: 1px black; /* Safari/Chrome */
+			text-stroke: 1px black;
+			color: white; /* set the font color to the desired color */
+		}
+
+        /* For extremely small screen devices (595px and below) */
+        @media only screen and (max-width: 300px) {
+            .card-header{
+                font-size: 25px !important;
+                text-align: left !important;
+                
+            }
+            
+            .margin-top-1{
+                margin-top: 1em !important;
+            }
+            
+            .col-3 img{
+            width: 170px;
+            height: 150px;
+            border: 5px hidden black;
+            border-radius: 5%;
+            }
+            
+            
+            .col-9 > h3{
+                font-size: 20px;
+                text-decoration: underline;
+                font-family: 'Lora', serif;
+            }
+            .col-9 p{
+                font-size: 16px;
+            }
+        }
+
+        /* Small screen devices (600px and above) */
+        @media (min-width: 300px) and (max-width: 600px) {
+            .card-header{
+                font-size: 30px !important;
+                text-align: left !important;
+            }
+            
+            .margin-top-1{
+                margin-top: 1em !important;
+            }
+            .col-3 img{
+            width: 170px;
+            height: 150px;
+            border: 5px hidden black;
+            border-radius: 5%;
+            }
+            
+            
+            .col-9 > h3{
+                font-size: 20px;
+                text-decoration: underline;
+                font-family: 'Lora', serif;
+            }
+            .col-9 p{
+                font-size: 16px;
+            }
+        }
+
+        /* Medium screen devices (768px and above) */
+        @media (min-width: 601px) and (max-width: 769px) {
+            
+            .card-header{
+                font-size: 40px !important;
+                text-align: left !important;
+                /* background-color: yellow; */
+            }
+            .margin-top-1{
+                margin-top: 1em !important;
+            }
+            
+            .col-9{
+                /* width: 90%; */
+                /* display: inline-block !important; */
+                /* float: right; */
+                margin-left: 20px;
+            }
+            .col-9 > h3{
+                font-size: 20px;
+                text-decoration: underline;
+                font-family: 'Lora', serif;
+            }
+            .col-9 p{
+                font-size: 16px;
+            }
+        }
+
+        /* Big screen devices (889px and above) */
+        @media (min-width: 770px) and (max-width: 889px) {
+            
+            .card-header{
+                font-size: 55px !important;
+            }
+            .col-3 img{
+            width: 85px;
+            height: 85px;
+            border: 5px hidden black;
+            border-radius: 50%;
+            }
+            .col-9{
+                /* width: 90%; */
+                /* display: inline-block !important; */
+                /* float: right; */
+                margin-left: 20px;
+            }
+            .col-9 > h3{
+                font-size: 22px;
+                text-decoration: underline;
+                font-family: 'Lora', serif;
+            }
+            .col-9 p{
+                font-size: 18px !important;
+            }
+
+        }
+
+        /* Extra big screen devices (1200px and above) */
+        @media only screen and (min-width: 890px){
+            
+            .card-header{
+                font-size: 55px !important;
+            }
+            .col-9 > h3{
+                font-size: 26px;
+                text-decoration: underline;
+                font-family: 'Lora', serif;
+            }
+            .col-9 p{
+                font-size: 22px !important;
+            }
+
+        }
+    </style>
+        <script>
+            var counter = 1;
+            setInterval(function() {
+                let lastitem = document.getElementById("last-card");
+                let text = "More Data will be Added Soon";
+                for(let i = 0; i <= counter % 3; i++)
+                    text += ".";
+                counter++;
+                lastitem.innerHTML = text;
+            }, 1000);
+          </script>
+
+</html>
