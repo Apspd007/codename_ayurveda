@@ -181,10 +181,19 @@
                         rel="noopener noreferrer">GGU</a></li>
                 <li><a href="https://aiia.gov.in/" class="underline text-blue-500" target="_blank"
                         rel="noopener noreferrer">AIIA</a></li>
+                
+                <li><a href="https://www.education.gov.in/" class="underline text-blue-500" target="_blank"
+                            rel="noopener noreferrer">M.O.E.</a></li>
+                <li><a href="./about-ayurveda.html" class="underline text-blue-500" target="_blank"
+                            rel="noopener noreferrer">About Ayurveda</a></li>
+                <li><a href="./team.html" class="underline text-blue-500" target="_blank"
+                                rel="noopener noreferrer">Our Team</a></li>
+                <li><a href="admin.jsp" class="underline text-blue-500" target="_blank"
+                        rel="noopener noreferrer">Admin</a></li>
             </ul>
         </div>
-        <hr width="100%" style="height:1px;border-width:0;color:gray;background-color:gray;">
-        <p class="text-center text-lg">Copyright &#169; 2022-2023</p>
+        <hr width="100%" style="height:1px;border-width:0;background-color:gray;">
+        <p class="flex flex-col justify-center items-center text-lg">Copyright &#169; 2022-2023</p>
     </footer>
     <!--<script src="js/script.js"></script>-->
 </body>
