@@ -21,7 +21,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+
 import com.ggv.ayurveda.DBConnection;
+import com.ggv.ayurveda.webutils.MessageTemplate;
 
 @MultipartConfig
 public class FilesUpload extends HttpServlet 
@@ -77,7 +79,7 @@ public class FilesUpload extends HttpServlet
             if(rs.next())
             {
                 NEXTVAL = rs.getInt(1);
-                out.print(NEXTVAL);
+                // out.print(NEXTVAL);
                 image_name = "img-"+NEXTVAL+extention;
                 pdf_name = NEXTVAL+".pdf";
             }
@@ -85,7 +87,13 @@ public class FilesUpload extends HttpServlet
         catch(Exception e)
         {
             System.out.print("1: "+e);
-            out.println("1: "+e);
+            
+            MessageTemplate errorMsg = new MessageTemplate();
+            String template = errorMsg.Message("Error!", "Oops! Something went wrong<br/>"+e, "../admin-menu.jsp", "Ok", "#f44336"); //error->#f44336
+            out.println(""+template);
+            e.printStackTrace();
+
+            // out.println("1: "+e);
             e.printStackTrace();
         }
 
@@ -103,7 +111,7 @@ public class FilesUpload extends HttpServlet
             fos.write(data);
             System.out.println("Image : "+img_path);
 
-            out.println("Imaged Saved");
+            // out.println("Imaged Saved");
         }
 
         //Saving PDF
@@ -115,13 +123,13 @@ public class FilesUpload extends HttpServlet
 
             is.read(data);
 
-            String pdf_path = request.getServletContext().getRealPath("/")+"docs"+File.separator+pdf_name;
+            String pdf_path = request.getServletContext().getRealPath("/")+"doc"+File.separator+pdf_name;
             FileOutputStream fos = new FileOutputStream(pdf_path);
             fos.write(data);
             System.out.println("PDF : "+pdf_path);
 
             System.out.println(pdf_path);
-            out.println("PDF Saved");
+            //out.println("PDF Saved");
         }
 
         try{
@@ -141,10 +149,16 @@ public class FilesUpload extends HttpServlet
         catch(Exception e)
         {
             System.out.print("2:"+e);
-            out.println("2:"+e);
+            // out.println("2:"+e);
+            MessageTemplate errorMsg = new MessageTemplate();
+            String template = errorMsg.Message("Error!", "Oops! Something went wrong<br/>"+e, "../admin-menu.jsp","Ok", "#f44336"); //error->#f44336
+            out.println(""+template);
             e.printStackTrace();
         }
 
+        MessageTemplate successMsg = new MessageTemplate();
+        String template = successMsg.Message("Success!", "Your request has been processed.", "../upload-files.jsp", "Ok", "#4CAF50"); //success->#4CAF50
+        out.println(""+template);
         out.close();
     }
 

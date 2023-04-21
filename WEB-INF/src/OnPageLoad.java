@@ -46,7 +46,8 @@ public class OnPageLoad extends HttpServlet
 
             //Creating card template
             StringBuilder cardTemplate = new StringBuilder();
-
+            // cardTemplate.append("<div class='container'>");
+            cardTemplate.append("<div class='row '>");
 
             for(int i = 1; i <= 10 && rs.next() ; i++)
             {
@@ -58,6 +59,9 @@ public class OnPageLoad extends HttpServlet
                 //out.println(cards);
             }
 
+            cardTemplate.append("</div>");
+            // cardTemplate.append("</div>");
+
             //Adding Load More Data button
             cardTemplate.append("<input type='hidden' name='rownum' id='rownum' value='"+offsetEnding+"'/>");
 
@@ -67,6 +71,7 @@ public class OnPageLoad extends HttpServlet
         catch(Exception e)
         {
             out.println("Error : "+e);
+            e.printStackTrace();
         }
     }
 }

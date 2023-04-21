@@ -82,7 +82,7 @@ public class DeleteModifiedData extends HttpServlet
         }
         
         //Deleting PDF
-        String pdf_path = request.getServletContext().getRealPath("/")+"docs"+File.separator+pdf_name;
+        String pdf_path = request.getServletContext().getRealPath("/")+"doc"+File.separator+pdf_name;
         file = new File(pdf_path);
         isDeleted = file.delete();
         if (isDeleted) {

@@ -23,30 +23,33 @@ public class Viewer extends HttpServlet
             int id = Integer.parseInt(req.getParameter("id").trim());
 
             
-            ServletContext context=getServletContext();
+            // ServletContext context=getServletContext();
 
-            //Setting Searched Attribute 
-            String recentSearch = (String)context.getAttribute("RecentSearch");
+            // //Setting Searched Attribute 
+            // String recentSearch = (String)context.getAttribute("RecentSearch");
 
-            //Check Null or not
-            if(recentSearch == null)
-            {
-                recentSearch = "&" + id;
-            }
-            else if(recentSearch.contains(""+id)) {
-                //Adding Searched item to Recent Search
-                recentSearch = recentSearch.replace("&"+id, "");
-                recentSearch = "&" + id + recentSearch;
-            } else
-                recentSearch = "&" + id + recentSearch;
+            // //Check Null or not
+            // if(recentSearch == null)
+            // {
+            //     recentSearch = "&" + id;
+            // }
+            // else if(recentSearch.contains(""+id)) {
+            //     //Adding Searched item to Recent Search
+            //     recentSearch = recentSearch.replace("&"+id, "");
+            //     recentSearch = "&" + id + recentSearch;
+            // } else
+            //     recentSearch = "&" + id + recentSearch;
 
-            //Adding on Searched Attribute
-            context=getServletContext();  
-            context.setAttribute("RecentSearch",recentSearch); 
+            // //Adding on Searched Attribute
+            // context=getServletContext();  
+            // context.setAttribute("RecentSearch",recentSearch); 
 
             //Including Pdf Viewer Page
-            RequestDispatcher rd = req.getRequestDispatcher("viewer.html");
-            rd.include(req, res);
+            // RequestDispatcher rd = req.getRequestDispatcher("doc/viewer.html?id="+id);
+            // rd.forward(req, res);
+
+            // res.sendRedirect("viewer.html?id="+id);  
+            res.sendRedirect("doc/viewer.html?id="+id);  
         }
         catch(Exception e)
         {

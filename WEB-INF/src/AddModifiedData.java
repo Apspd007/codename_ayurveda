@@ -162,7 +162,7 @@ public class AddModifiedData extends HttpServlet
 
             is.read(data);
 
-            String pdf_path = request.getServletContext().getRealPath("/")+"docs"+File.separator+pdf_name;
+            String pdf_path = request.getServletContext().getRealPath("/")+"doc"+File.separator+pdf_name;
             FileOutputStream fos = new FileOutputStream(pdf_path);
             fos.write(data);
             System.out.println("PDF : "+pdf_path);

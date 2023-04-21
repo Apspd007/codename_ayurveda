@@ -12,8 +12,12 @@ const image_text = document.getElementById("image-text");
 const next_btn = document.getElementById("next-btn")
 const previous_btn = document.getElementById("previous-btn")
 
-next_btn.addEventListener('click', nextImage);
-previous_btn.addEventListener('click', previousImage);
+try {
+    next_btn.addEventListener('click', nextImage);
+    previous_btn.addEventListener('click', previousImage);
+} catch (error) {
+    
+}
 
 function nextImage() {
     if (index < (data.length - 1)) index++;
@@ -42,4 +46,11 @@ function redirectHome() {
 
 function blankRedirect(n) {
     window.open(n, '_blank');
+}
+
+
+function openMenu() {
+    const menu = document.getElementById("mob-menu")
+    // menu.classList.toggle("absolute")
+    menu.classList.toggle("hidden")
 }

@@ -1,9 +1,12 @@
+console.log("ddd "+window.location.pathname);
+
 //Getting pdf name from url
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const pdfName = urlParams.get('id');
 
-const url = `docs/${pdfName}.pdf`;
+// const url = `docs/${pdfName}.pdf`;
+const url = `doc/${pdfName}.pdf`;
 console.log("location : "+url);
 let pdfDoc = null,
   pageNum = 1,

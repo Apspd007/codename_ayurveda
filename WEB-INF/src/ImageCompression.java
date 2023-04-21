@@ -17,7 +17,10 @@ public class ImageCompression
         String currentPath = System.getProperty("user.dir");
         System.out.println(currentPath);
 
-        currentPath += sp+"webapps"+sp+"codename-ayurveda"+sp;
+        // currentPath += sp+"webapps"+sp+"codename-ayurveda"+sp;
+
+        currentPath += sp+"webapps"+sp+"ROOT"+sp;
+
         String compressed_img_path = currentPath+"images"+sp+"plants"+sp+"thumbnails"+sp+"thumb-img-"+id+".jpg";
         String original_img_path = currentPath+"images"+sp+"plants"+sp+"img-"+id+".jpg";
         

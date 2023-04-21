@@ -46,8 +46,8 @@
             <header class=" w-full px-10 flex justify-between items-center md:flex-row flex-col gap-y-4">
                 <div onclick="blankRedirect('https://www.ggu.ac.in/')" class="cursor-pointer"><img
                         class="max-h-[70px] object-cover" src="images/ggu-image.png"></div>
-                <div onclick="blankRedirect('https://aiia.gov.in/')" class="cursor-pointer"><img
-                        class="max-h-[60px] object-cover" src="images/aiia-image.png"></div>
+                <div onclick="blankRedirect('https://www.aicte-india.org/')" class="cursor-pointer"><img
+                        class="max-h-[60px] object-cover" src="images/aicte_logo.png"></div>
             </header>
     
             <!-- Logo and navigation -->
@@ -77,8 +77,8 @@
                 <div onclick="blankRedirect('https://www.ggu.ac.in/')" class="cursor-pointer"><img
                         class="2xl:h-[90px] max-h-[90px] object-cover" src="images/ggu-image.png"></div>
                 <img class="h-28 object-cover cursor-pointer" onclick="redirectHome()" src="images/gg.png">
-                <div onclick="blankRedirect('https://aiia.gov.in/')" class="cursor-pointer"><img
-                        class="2xl:h-[90px] max-h-[90px] object-cover" src="images/aiia-image.png"></div>
+                <div onclick="blankRedirect('https://www.aicte-india.org/')" class="cursor-pointer"><img
+                        class="2xl:h-[90px] max-h-[90px] object-cover" src="images/aicte_logo.png"></div>
             </header>
             <!-- Logo and navigation -->
             <div class="flex justify-between items-end">
@@ -99,7 +99,7 @@
                         <div id="menu-item-about" class="hidden peer-hover:grid hover:grid grid-flow-row
                      bg-white drop-shadow-lg absolute z-10">
                      <a class="px-5 py-3 hover:bg-gray-200" href="nav-pages/about-ggu.html">About GGU</a>
-                     <a class="px-5 py-3 hover:bg-gray-200" href="https://aiia.gov.in/about/">About AIIA</a>
+                     <a class="px-5 py-3 hover:bg-gray-200" href="https://www.aicte-india.org/about-us/history">About AIIA</a>
                      <a class="px-5 py-3 hover:bg-gray-200" href="https://www.education.gov.in/about-moe">About MOE</a>
                      <a class="px-5 py-3 hover:bg-gray-200" href="./about-ayurveda.html">About Ayurveda</a>
                         </div>
@@ -236,7 +236,7 @@
     </style>
     
         <!-- footer -->
-    <footer class="h-[30vh] bg-gray-200 py-4 flex flex-col justify-end items-center ">
+    <footer class="bg-gray-200 py-4 flex flex-col justify-end items-center ">
 
         <div class="w-full mb-auto grid grid-cols-2 justify-between">
             <div><img class="invert" src="images/ayurveda-logo.png" alt="Ayurveda logo"></div>
@@ -244,7 +244,7 @@
                 <li>More Links</li>
                 <li><a href="https://www.ggu.ac.in/" class="underline text-blue-500" target="_blank"
                         rel="noopener noreferrer">GGU</a></li>
-                <li><a href="https://aiia.gov.in/" class="underline text-blue-500" target="_blank"
+                <li><a href="https://www.aicte-india.org/" class="underline text-blue-500" target="_blank"
                         rel="noopener noreferrer">AIIA</a></li>
                 
                 <li><a href="https://www.education.gov.in/" class="underline text-blue-500" target="_blank"
