@@ -1,3 +1,5 @@
+<!--   Temprariory   -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +15,9 @@
 
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"/>
+
+    <!-- Font Awesome Icon -->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
 
     <link rel="stylesheet" href="style.css">
@@ -139,43 +144,185 @@
     </section>
     <!-- header end -->
 
+
+    <!-- SEARCH BOX :  -->
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-md-2 d-none d-sm-none d-md-block text-center" style="border-right: 3px solid #4B5563;" >
+                <h1 style=" font-size: 1.25rem; list-style: 1.75rem;" >Recent Search</h1>
+                <div style="width: 100%;height: 100%;">
+                    <ul style="list-style: none; text-align: center;" id="recentsearch">
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-10 col-sm-12 col-12">
+                <!-- SearchBox -->
+                <form class="d-flex">
+                    <input class="form-control mx-sm-5 mx-0" type="text" id="search_query" name="query" list="search_queries" placeholder="Search" aria-label="Search" style="background-color: #D4D4D8; padding-left:40px; color: black;" autocomplete="search_item();" onkeyup="search_item();" onkeydown="addSearchHistory(event)" oninput="search_item();addSearchHistory(event);">
+                    <datalist id="search_queries"></datalist>
+                </form>     
+
+                <!--  Cards  -->
+                <div class="container-fluid mt-2 " id="results">
+                    <!-- Complete Card : -->
+                    <div class="row mx-sm-5 mx-0">
+                        <div class="col-md-8 col-sm-12 col-12">
+                            <div class="card-x container-fluid">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-3 col-12">
+                                        <img src="https://www.solodev.com/_/images/client-loader.gif" class="img-height img-fluid" alt="">
+                                    </div>
+                                    <div class="col-md-8 col-sm-9 col-12" style="line-height: 30px;">
+                                        <h1 class="text-ctr" style="line-height: 40px;"><b>Comman Name :</b> Tulsi</h1>
+                                        <h1 class="text-ctr" style="line-height: 40px;"><b>Scintific Name : </b>Algeria</h1>
+                                        <div class="d-grid gap-2 mt-4">
+                                            <a href="Viewer?id=4" class="btn btn-primary" style="color:blue;" type="button"  onmouseover  = "this.style.color = 'white'" onmouseout  = "this.style.color = 'blue'">See Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+                    <!-- Complete Card :: -->
+                    <!-- Complete Card : -->
+                    <div class="row mx-sm-5 mx-0">
+                        <div class="col-md-8 col-sm-12 col-12">
+                            <div class="card-x container-fluid">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-3 col-12">
+                                        <img src="https://www.solodev.com/_/images/client-loader.gif" class="img-height img-fluid" alt="">
+                                    </div>
+                                    <div class="col-md-8 col-sm-9 col-12" style="line-height: 30px;">
+                                        <h1 class="text-ctr" style="line-height: 40px;"><b>Comman Name :</b> Tulsi</h1>
+                                        <h1 class="text-ctr" style="line-height: 40px;"><b>Scintific Name : </b>Algeria</h1>
+                                        <div class="d-grid gap-2 mt-4">
+                                            <a href="Viewer?id=4" class="btn btn-primary" style="color:blue;" type="button"  onmouseover  = "this.style.color = 'white'" onmouseout  = "this.style.color = 'blue'">See Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+                    <!-- Complete Card :: -->
+                    <!-- Complete Card : -->
+                    <div class="row mx-sm-5 mx-0">
+                        <div class="col-md-8 col-sm-12 col-12">
+                            <div class="card-x container-fluid">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-3 col-12">
+                                        <img src="images/plants/thumbnails/thumb-img-4.jpg" class="img-height img-fluid" alt="">
+                                    </div>
+                                    <div class="col-md-8 col-sm-9 col-12" style="line-height: 30px;">
+                                        <h1 class="text-ctr" style="line-height: 40px;"><b>Comman Name :</b> Tulsi</h1>
+                                        <h1 class="text-ctr" style="line-height: 40px;"><b>Scintific Name : </b>Algeria</h1>
+                                        <div class="d-grid gap-2 mt-4">
+                                            <a href="Viewer?id=4" class="btn btn-primary" style="color:blue;" type="button"  onmouseover  = "this.style.color = 'white !important'" onmouseout  = "this.style.color = 'blue'">See Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+                    <!-- Complete Card :: -->
+                </div>
+            </div>
+        </div>
+        <div class="row mx-auto mt-2">
+            <div class="mx-auto" style="max-width: 250px;">
+                <button class="btn btn-primary" style="color:blue; padding: 5px; max-width: 120px;" type="button"  onmouseover  = "this.style.color = 'white'" onmouseout  = "this.style.color = 'blue'">Load More...</button>
+            </div>
+        </div>
+
+    </div>
+
+    <style>
+        .card-x{
+            border: 5px solid #E5E7EB;
+            border-radius: 5px;
+            background-color: #E5E7EB;
+        }
+        
+        @media (max-width:578px){
+            .img-height{
+                max-height: 220px !important;
+                text-align: center !important;
+                margin: auto !important;
+            }
+            .text-ctr{
+                text-align: center !important;
+                line-height: 20px !important;
+            }
+            .card-x{
+                max-height: 330px;
+                max-width: 280px;
+            }
+        }
+        @media (min-width:578px) and (max-width:757px) {
+            .img-height{
+                min-height: 130px;
+            }
+            
+        }
+        @media(min-width:757px){
+            .img-height{
+                min-height: 125px;
+            }
+        }
+
+        @media (min-width: 576px) { }
+
+        @media (min-width: 768px) { }
+
+        @media (min-width: 992px) {  }
+
+        @media (min-width: 1200px) {  }
+
+        @media (min-width: 1400px) {  }
+    </style>
+    <!-- TEMP SEARCH BOX ::::  -->
+
+
     
 
-    <!-- search box -->
+    <!-- search box --
     <div class="max-w-[75%] min-w-max flex gap-x-10 mt-14 ml-14">
-        <!-- recent searches section -->
+        <!-- recent searches section --
         <div id="recentsearch" class="hidden lg:flex gap-x-8">
             <h2  class="text-xl mt-4">Recent Search</h2><br>
             <div class="h-[550px] w-[1px] bg-gray-600"></div>
         </div>
-        <!-- recent searches section end -->
-        <!-- search section -->
-        <div class="mt-4 flex flex-col gap-y-10">
-            <!-- search bar -->
-            <div class="bg-zinc-300 max-w-xl rounded flex"><img class="mx-4" src="images/search.svg" height="24"
-                    width="24" alt="search icon" srcset=""><input id="search_query" list="search_queries"
+        <!-- recent searches section end --
+        <!-- search section --
+        <div id="result-container" class="mt-4 flex flex-col gap-y-10">
+            <!-- search bar --
+            
+            <div id="search-bar_" class="bg-zinc-300 max-w-xl rounded flex"><img class="mx-4" src="images/search.svg" height="24"
+                    width="24" alt="search icon" srcset=""><input id="search_query_" list="search_queries_"
                     class="bg-zinc-300 text-black p-2 placeholder-black outline-none rounded-tr rounded-br"
                     type="text" name="query" placeholder="Search" autocomplete="search_item();" onkeyup="search_item();" onkeydown="addSearchHistory(event)" oninput="search_item();addSearchHistory(event);">
-                    <datalist id="search_queries"></datalist>
+                    <datalist id="search_queries-"></datalist>
                 </div>
-
-            <!-- search results -->
-            <div id="results" class="container">
+            
+            
+            
+            <!-- search results --
+            <div id="results_" class="container-fluid">
                 
-                <!-- card -->
-                <!-- card end -->
+                <!-- card --
+                <!-- card end --
             </div>
             
-            <!-- search results end-->
-            <div class="container">
-                <!-- <p style="text-align: end;"><button id="loadbutton" type="button" style="background:none;color:blue;  border:none; padding:0; margin:0; cursor:pointer; text-decoration: none;" onmouseover  = "this.style.textDecoration = 'underline'" onmouseout  = "this.style.textDecoration = 'none'" onclick="loadMoreData()">Load More Data...</button></p> -->
+            <!-- search results end--
+            <div class="container-fluid">
+                <!-- <p style="text-align: end;"><button id="loadbutton" type="button" style="background:none;color:blue;  border:none; padding:0; margin:0; cursor:pointer; text-decoration: none;" onmouseover  = "this.style.textDecoration = 'underline'" onmouseout  = "this.style.textDecoration = 'none'" onclick="loadMoreData()">Load More Data...</button></p> --
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <button id="loadbutton" class="btn btn-primary me-md-2" type="button" style="color:blue"  onmouseover  = "this.style.color = 'white'" onmouseout  = "this.style.color = 'blue'" onclick="loadMoreData()">Load More...</button>
-                    <!-- <button class="btn btn-primary" type="button">Button</button> -->
+                    <!-- <button class="btn btn-primary" type="button">Button</button> --
                   </div>
             </div>
         </div>
-        <!-- search section end -->
+        <!-- search section end --
         
     </div>
     <!-- search box end -->
@@ -207,63 +354,6 @@
     </footer>
     <script>loadSuggestion();loadTabs();</script>
 
-    <style>
-        #results{
-            border: 5px solid red;
-        }
-        .card-style{
-
-        }
-        .img-thumb{
-
-        }
-        @media only screen and (max-width: 100px){
-        }
-        @media (min-width:100px) and (max-width: 250px){
-            .img-thumb{
-                width: clamp(100px, 250px, 250px) !important;
-                /* height: 400px !important; */
-            }
-            .card{
-                width: clamp(100px, 250px, 250px) !important;
-
-            }
-        }
-        @media (min-width:251px) and (max-width: 400px){
-            .img-thumb{
-                width: clamp(251px, 400px, 400px) !important;
-                /* height: 400px !important; */
-            }
-            .card{
-                width: clamp(251px, 400px, 400px) !important;
-
-            }
-
-        }
-        @media (min-width:400px) and (max-width: 581px){
-            .img-thumb{
-                width: clamp(400px, 581px, 581px) !important;
-                /* height: 400px !important; */
-            }
-            .card{
-                width: clamp(400px, 581px, 581px) !important;
-
-            }
-        }
-        @media (min-width:580px) and (max-width: 602px){
-            .img-thumb{
-                width:400px;
-            }
-        }
-        @media (min-width: 602px) and (max-width:760px){
-            
-        }
-        @media (min-width: 760px) and (max-width: 888px){
-        }
-        @media (min-width: 888px) and (max-width: 1400px){
-            
-        }
-    </style>
 
     <!-- Bootstrap JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

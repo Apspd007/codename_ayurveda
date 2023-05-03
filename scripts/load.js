@@ -64,11 +64,14 @@ function search_item()
         if(xhr.status == 200 && xhr.readyState == 4)
         {
             results.innerHTML = xhr.responseText;
+            console.log(xhr.responseText);
+            // alert(xhr.responseText);
             // document.getElementById('loadbutton').style.display = 'initial';
         }
         else
         {
             //display loading css
+            results.innerHTML = "";
         }
     }
 }
@@ -255,19 +258,18 @@ function addSearchHistory(event) {
   
   let historyTemplate = "";
 
-  historyTemplate += "<ul>";
-  historyTemplate += "<h1 style='font-size:20px; margin-top:20px;'>Recent Search</h1>"
+//   historyTemplate += "<ul>";
+//   historyTemplate += "<h1 style='font-size:20px; margin-top:20px;'>Recent Search</h1>"
   for(let x of search_history)
   {
     historyTemplate += '<li>';
     historyTemplate += `<button type='button' style='background:none;color:blue;  border:none; padding:0; margin:0; cursor:pointer; text-decoration: none;' onmouseover  = "this.style.textDecoration = 'underline' " onmouseout  = " this.style.textDecoration = 'none' " onclick='setData("${x}")'>${x}</button>`;
     historyTemplate += '</li>';
   }
-  historyTemplate += "</ul>";
+//   historyTemplate += "</ul>";
 
 
   // Adding black Seperator lines
-  historyTemplate += `<div class="h-[550px] w-[1px] bg-gray-600"></div>`;
 
   recentsearch.innerHTML = historyTemplate;
 }

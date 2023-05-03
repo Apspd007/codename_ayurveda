@@ -70,6 +70,7 @@ public class SearchPlants extends HttpServlet
 
             if(!avaibleData)
             {
+                System.out.println("No More Row Selected...<br>");
                 out.println("No More Row Selected...<br>");
                 return;
             }        
@@ -106,8 +107,8 @@ public class SearchPlants extends HttpServlet
             out.println("No result found");
 
             //Showing Default Data 
-            com.ggv.ayurveda.OnPageLoad defaultData = new com.ggv.ayurveda.OnPageLoad();
-            defaultData.doGet(req, res);
+            // com.ggv.ayurveda.OnPageLoad defaultData = new com.ggv.ayurveda.OnPageLoad();
+            // defaultData.doGet(req, res);
         }
     }
 }

@@ -22,6 +22,25 @@ public class CardUtil
             path = "."+sp+"images"+sp+"plants"+sp+"img-"+id+".jpg";;
         }
         
+        template.append("                    <div class='row mx-sm-5 mx-0 mt-2'>");
+        template.append("                        <div class='col-md-8 col-sm-12 col-12'>");
+        template.append("                            <div class='card-x container-fluid'>");
+        template.append("                                <div class='row'>");
+        template.append("                                    <div class='col-md-4 col-sm-3 col-12'>");
+        template.append("                                        <img src='"+path+"' class='img-height img-fluid' alt=''>");
+        template.append("                                    </div>");
+        template.append("                                    <div class='col-md-8 col-sm-9 col-12' style='line-height: 30px;'>");
+        template.append("                                        <h1 class='text-ctr' style='line-height: 40px;'><b>Comman Name :</b> "+comman_name+"</h1>");
+        template.append("                                        <h1 class='text-ctr' style='line-height: 40px;'><b>Scientific Name : </b>"+sci_name+"</h1>");
+        template.append("                                        <div class='d-grid gap-2 mt-4'>");
+        template.append("                                            <a href='Viewer?id="+id+"' class='btn btn-primary' style='color:blue;' type='button'>See Details</a>");
+        template.append("                                        </div>");
+        template.append("                                    </div>");
+        template.append("                                </div>");
+        template.append("                            </div>");
+        template.append("                        </div>");
+        template.append("                    </div><br>");
+
         // template.append("<div class='card' style='max-width: 540px;'>");
         // template.append("  <div class='row g-2 gx-2 row-cols-1'>");
         // template.append("    <div class='col-md-4'>");
@@ -38,16 +57,16 @@ public class CardUtil
         // template.append("</div>");
         
 
-        template.append("<div class='col-sm-6 col-md-6 col-lg-6 col-12'>");
-        template.append("<div class='card'>");
-        template.append("<img src='"+path+"' class='card-img-top img-thumb'/>");
-        template.append("<div class='card-body'>");
-        template.append("<h5 class='card-title' style:'text-align:center;'> Comman Name : "+comman_name+"</h5>");
-        template.append("<p class='card-text' style:'text-align:center;'>Scientific Name: "+sci_name+"</p>");
-        template.append("<a href='Viewer?id="+id+"' class='btn btn-primary' style:'text-align:center;'>See details</a>");
-        template.append("</div>");
-        template.append("</div>");
-        template.append("</div>");
+        // template.append("<div class='col-sm-6 col-md-6 col-lg-6 col-12'>");
+        // template.append("<div class='card'>");
+        // template.append("<img src='"+path+"' class='card-img-top img-thumb'/>");
+        // template.append("<div class='card-body'>");
+        // template.append("<h5 class='card-title' style:'text-align:center;'> Comman Name : "+comman_name+"</h5>");
+        // template.append("<p class='card-text' style:'text-align:center;'>Scientific Name: "+sci_name+"</p>");
+        // template.append("<a href='Viewer?id="+id+"' class='btn btn-primary' style:'text-align:center;'>See details</a>");
+        // template.append("</div>");
+        // template.append("</div>");
+        // template.append("</div>");
 
         // template.append("<a href ='/viewer.html?id="+id+"' >");
         // template.append("<a href ='Viewer?id="+id+"' >"); //using 
